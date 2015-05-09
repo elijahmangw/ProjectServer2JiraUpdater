@@ -12,15 +12,7 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.2.3.RELEASE</version>
     </parent>
-
-  <repositories>
-    <repository>
-      <id>my-repo1</id>
-      <name>your custom repo</name>
-      <url>https://m2proxy.atlassian.com/repository/public</url>
-    </repository>
-  </repositories>
-
+    
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,11 +22,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-batch</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.atlassian.jira</groupId>
-            <artifactId>jira-rest-java-client</artifactId>
-            <version>1.2-m01</version>
-        </dependency>
+	    <dependency>
+	      <groupId>net.rcarz</groupId>
+	      <artifactId>jira-client</artifactId>
+	      <version>0.5</version>
+	    </dependency>
     </dependencies>
 
     <build>

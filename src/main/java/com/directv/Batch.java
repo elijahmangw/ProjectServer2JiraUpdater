@@ -1,7 +1,11 @@
 package com.directv;
 
-import java.net.URI;
 import java.util.List;
+
+import net.rcarz.jiraclient.BasicCredentials;
+import net.rcarz.jiraclient.Field;
+import net.rcarz.jiraclient.Issue;
+import net.rcarz.jiraclient.JiraClient;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -17,11 +21,6 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-
-import com.atlassian.jira.rest.client.JiraRestClient;
-import com.atlassian.jira.rest.client.NullProgressMonitor;
-import com.atlassian.jira.rest.client.domain.Issue;
-import com.atlassian.jira.rest.client.internal.jersey.JerseyJiraRestClientFactory;
 
 @Configuration
 @EnableBatchProcessing
@@ -49,16 +48,17 @@ public class Batch {
 
 			@Override
 			public void write(List<? extends Project> items) throws Exception {
-				for(Project item : items){
+				/*for(Project item : items){
 					System.out.println("Sending to JIRA "+item);
-				}
-		       /* final JerseyJiraRestClientFactory factory = new JerseyJiraRestClientFactory();
-		        final URI jiraServerUri = new URI("https://jira.atlassian.com/projects/DEMO");
-		        final JiraRestClient restClient = factory.createWithBasicHttpAuthentication(jiraServerUri, "yourusername", "yourpassword");
-		        final NullProgressMonitor pm = new NullProgressMonitor();
-		        final Issue issue = restClient.getIssueClient().getIssue("TST-66873", pm);
-		 
-		        System.out.println(issue);*/
+				}*/
+				BasicCredentials creds = new BasicCredentials("batman", "pow! pow!");
+		        JiraClient jira = new JiraClient("https://jira.example.com/jira", creds);
+				 Issue issue = jira.getIssue("TEST-123");
+				 issue.update()
+	                .fieldAdd(Field.LABELS, "baz")
+	                .fieldRemove(Field.LABELS, "foo")
+	                .execute();
+		        System.out.println(issue);
 			}
 
         };
