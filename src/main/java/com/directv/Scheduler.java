@@ -25,7 +25,9 @@ public class Scheduler {
     @Autowired
     Job job;
 
-    @Scheduled(fixedRate = 5000)
+    //@Scheduled(fixedRate = 5000)
+    //Using cron for schedule tasks
+    @Scheduled(cron = "10 * * * * ?")
     public void reportCurrentTime() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
 		jobLauncher.run(job, new JobParameters());
     }

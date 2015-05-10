@@ -51,13 +51,13 @@ public class Batch {
 				/*for(Project item : items){
 					System.out.println("Sending to JIRA "+item);
 				}*/
-				BasicCredentials creds = new BasicCredentials("batman", "pow! pow!");
-		        JiraClient jira = new JiraClient("https://jira.example.com/jira", creds);
-				 Issue issue = jira.getIssue("TEST-123");
-				 issue.update()
-	                .fieldAdd(Field.LABELS, "baz")
-	                .fieldRemove(Field.LABELS, "foo")
-	                .execute();
+				BasicCredentials creds = new BasicCredentials("XXX", "atitelovoydicir");
+		        JiraClient jira = new JiraClient("https://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
+				 Issue issue = jira.getIssue("TBD-696");
+				 issue.update().field(Field.SUMMARY, "elToli").execute();
+	             issue.update().field(Field.PRIORITY, "critical").execute();
+				 //.fieldRemove(Field.LABELS, "foo")
+	                //.execute();
 		        System.out.println(issue);
 			}
 
