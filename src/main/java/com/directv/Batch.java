@@ -48,16 +48,17 @@ public class Batch {
 
 			@Override
 			public void write(List<? extends Project> items) throws Exception {
-				/*for(Project item : items){
+				for(Project item : items){
 					System.out.println("Sending to JIRA "+item);
-				}*/
-				BasicCredentials creds = new BasicCredentials("XXX", "atitelovoydicir");
-		        JiraClient jira = new JiraClient("https://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
-				 Issue issue = jira.getIssue("TBD-696");
-				 issue.update().field(Field.SUMMARY, "elToli").execute();
-	             issue.update().field(Field.PRIORITY, "critical").execute();
-				 //.fieldRemove(Field.LABELS, "foo")
-	                //.execute();
+				}
+				//BasicCredentials creds = new BasicCredentials("XXX", "atitelovoydicir");
+				BasicCredentials creds = new BasicCredentials("elToli", "Oculta");
+		        JiraClient jira = new JiraClient("http://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
+				Issue issue = jira.getIssue("TBD-696");
+				issue.update().field(Field.SUMMARY, "Demo Description").execute();
+	            issue.update().field(Field.PRIORITY, "Critical").execute();
+				//.fieldRemove(Field.LABELS, "foo")
+	            //.execute();
 		        System.out.println(issue);
 			}
 
