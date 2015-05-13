@@ -1,263 +1,265 @@
 package com.directv;
 
-import java.util.Date;
 
 /*
  * Public class to encapsulate the Project object information coming from ProjectServer
  * and populating it after transformation to Jira Global Project
  */
 public class Project {
-    //information from the sp site/report
-	private String WBS; //Finance_Charge_Code
-	private String Summary; //ProjectName;
-	private String Description;
-	private String Technical_Lead;
-	private String Program_Manager;
-	private String Project_Manager;
-	private Date ProjectStartDate;
-	private Date ProjectFinishDate;
-	private Date PDRDate; //PDR_Finish;
-	private Date CDRDate; //CDR_Finish;
-	private Date InServiceDate; //Client_InService_Release;
-	private Date Key_Release;
-	private String Site_URL;
-	private String Priority;
+
+	//information from ProjectServer site/report
+	private String wbs; //Finance_Charge_Code
+	private String summary; //ProjectName;
+	private String description;
+	private String technicalLead;
+	private String programManager;
+	private String projectManager;
+	private String projectStartDate;
+	private String projectFinishDate;
+	private String pdrDate; //PDR_Finish;
+	private String cdrDate; //CDR_Finish;
+	private String inServiceDate; //Client_InService_Release;
+	private String keyRelease;
+	private String siteUrl;
+	private String priority;
 
     public Project() {
     	
     }
 
-    public Project(String ChargeCode, String projname, String descr, String TL, String PgM, String projmgr, Date PRJStart, Date PRJEnd, Date PDR, Date CDR,
-    					Date InSvcDate, Date KeyRelease, String URL, String Priority) {
-    	this.WBS = ChargeCode;
-    	this.Summary = projname;
-    	this.Description = descr;
-    	this.Technical_Lead = TL;
-    	this.Program_Manager = PgM;
-    	this.Project_Manager = projmgr;
-    	this.ProjectStartDate = PRJStart; 
-    	this.ProjectFinishDate = PRJEnd;
-    	this.PDRDate = PDR;
-    	this.CDRDate = CDR;
-    	this.InServiceDate = InSvcDate;
-    	this.Key_Release = KeyRelease;
-    	this.Site_URL = URL;
-    	this.Priority = Priority;
-    }
-
-    /**
-	 * @return the wBS
-	 */
-	public String getWBS() {
-		return WBS;
+	public Project(String wbs, String summary, String description,
+			String technicalLead, String programManager, String projectManager,
+			String projectStartDate, String projectFinishDate, String pdrDate,
+			String cdrDate, String inServiceDate, String keyRelease, String siteUrl,
+			String priority) {
+		super();
+		this.wbs = wbs;
+		this.summary = summary;
+		this.description = description;
+		this.technicalLead = technicalLead;
+		this.programManager = programManager;
+		this.projectManager = projectManager;
+		this.projectStartDate = projectStartDate;
+		this.projectFinishDate = projectFinishDate;
+		this.pdrDate = pdrDate;
+		this.cdrDate = cdrDate;
+		this.inServiceDate = inServiceDate;
+		this.keyRelease = keyRelease;
+		this.siteUrl = siteUrl;
+		this.priority = priority;
 	}
 
 	/**
-	 * @param wBS the wBS to set
+	 * @return the wbs
 	 */
-	public void setWBS(String wBS) {
-		WBS = wBS;
+	public String getWbs() {
+		return wbs;
+	}
+
+	/**
+	 * @param wbs the wbs to set
+	 */
+	public void setWbs(String wbs) {
+		this.wbs = wbs;
 	}
 
 	/**
 	 * @return the summary
 	 */
 	public String getSummary() {
-		return Summary;
+		return summary;
 	}
 
 	/**
 	 * @param summary the summary to set
 	 */
 	public void setSummary(String summary) {
-		Summary = summary;
+		this.summary = summary;
 	}
 
 	/**
 	 * @return the description
 	 */
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 
 	/**
 	 * @param description the description to set
 	 */
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 
 	/**
-	 * @return the technical_Lead
+	 * @return the technicalLead
 	 */
-	public String getTechnical_Lead() {
-		return Technical_Lead;
+	public String getTechnicalLead() {
+		return technicalLead;
 	}
 
 	/**
-	 * @param technical_Lead the technical_Lead to set
+	 * @param technicalLead the technicalLead to set
 	 */
-	public void setTechnical_Lead(String technical_Lead) {
-		Technical_Lead = technical_Lead;
+	public void setTechnicalLead(String technicalLead) {
+		this.technicalLead = technicalLead;
 	}
 
 	/**
-	 * @return the program_Manager
+	 * @return the programManager
 	 */
-	public String getProgram_Manager() {
-		return Program_Manager;
+	public String getProgramManager() {
+		return programManager;
 	}
 
 	/**
-	 * @param program_Manager the program_Manager to set
+	 * @param programManager the programManager to set
 	 */
-	public void setProgram_Manager(String program_Manager) {
-		Program_Manager = program_Manager;
+	public void setProgramManager(String programManager) {
+		this.programManager = programManager;
 	}
 
 	/**
-	 * @return the project_Manager
+	 * @return the projectManager
 	 */
-	public String getProject_Manager() {
-		return Project_Manager;
+	public String getProjectManager() {
+		return projectManager;
 	}
 
 	/**
-	 * @param project_Manager the project_Manager to set
+	 * @param projectManager the projectManager to set
 	 */
-	public void setProject_Manager(String projmgr) {
-		Project_Manager = projmgr;
+	public void setProjectManager(String projectManager) {
+		this.projectManager = projectManager;
 	}
 
 	/**
 	 * @return the projectStartDate
 	 */
-	public Date getProjectStartDate() {
-		return ProjectStartDate;
+	public String getProjectStartDate() {
+		return projectStartDate;
 	}
 
 	/**
 	 * @param projectStartDate the projectStartDate to set
 	 */
-	public void setProjectStartDate(Date projectStartDate) {
-		ProjectStartDate = projectStartDate;
+	public void setProjectStartDate(String projectStartDate) {
+		this.projectStartDate = projectStartDate;
 	}
 
 	/**
 	 * @return the projectFinishDate
 	 */
-	public Date getProjectFinishDate() {
-		return ProjectFinishDate;
+	public String getProjectFinishDate() {
+		return projectFinishDate;
 	}
 
 	/**
 	 * @param projectFinishDate the projectFinishDate to set
 	 */
-	public void setProjectFinishDate(Date projectFinishDate) {
-		ProjectFinishDate = projectFinishDate;
+	public void setProjectFinishDate(String projectFinishDate) {
+		this.projectFinishDate = projectFinishDate;
 	}
 
 	/**
-	 * @return the pDRDate
+	 * @return the pdrDate
 	 */
-	public Date getPDRDate() {
-		return PDRDate;
+	public String getPdrDate() {
+		return pdrDate;
 	}
 
 	/**
-	 * @param pDRDate the pDRDate to set
+	 * @param pdrDate the pdrDate to set
 	 */
-	public void setPDRDate(Date pDRDate) {
-		PDRDate = pDRDate;
+	public void setPdrDate(String pdrDate) {
+		this.pdrDate = pdrDate;
 	}
 
 	/**
-	 * @return the cDRDate
+	 * @return the cdrDate
 	 */
-	public Date getCDRDate() {
-		return CDRDate;
+	public String getCdrDate() {
+		return cdrDate;
 	}
 
 	/**
-	 * @param cDRDate the cDRDate to set
+	 * @param cdrDate the cdrDate to set
 	 */
-	public void setCDRDate(Date cDRDate) {
-		CDRDate = cDRDate;
+	public void setCdrDate(String cdrDate) {
+		this.cdrDate = cdrDate;
 	}
 
 	/**
 	 * @return the inServiceDate
 	 */
-	public Date getInServiceDate() {
-		return InServiceDate;
+	public String getInServiceDate() {
+		return inServiceDate;
 	}
 
 	/**
 	 * @param inServiceDate the inServiceDate to set
 	 */
-	public void setInServiceDate(Date inServiceDate) {
-		InServiceDate = inServiceDate;
+	public void setInServiceDate(String inServiceDate) {
+		this.inServiceDate = inServiceDate;
 	}
 
 	/**
-	 * @return the key_Release
+	 * @return the keyRelease
 	 */
-	public Date getKey_Release() {
-		return Key_Release;
+	public String getKeyRelease() {
+		return keyRelease;
 	}
 
 	/**
-	 * @param key_Release the key_Release to set
+	 * @param keyRelease the keyRelease to set
 	 */
-	public void setKey_Release(Date key_Release) {
-		Key_Release = key_Release;
+	public void setKeyRelease(String keyRelease) {
+		this.keyRelease = keyRelease;
 	}
 
 	/**
-	 * @return the site_URL
+	 * @return the siteUrl
 	 */
-	public String getSite_URL() {
-		return Site_URL;
+	public String getSiteUrl() {
+		return siteUrl;
 	}
 
 	/**
-	 * @param site_URL the site_URL to set
+	 * @param siteUrl the siteUrl to set
 	 */
-	public void setSite_URL(String site_URL) {
-		Site_URL = site_URL;
+	public void setSiteUrl(String siteUrl) {
+		this.siteUrl = siteUrl;
 	}
 
 	/**
 	 * @return the priority
 	 */
 	public String getPriority() {
-		return Priority;
+		return priority;
 	}
 
 	/**
 	 * @param priority the priority to set
 	 */
 	public void setPriority(String priority) {
-		Priority = priority;
+		this.priority = priority;
 	}
 
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
+	  /* (non-Javadoc)
+		 * @see java.lang.Object#toString()
+		 */
 	@Override
 	public String toString() {
-		return "Project [WBS=" + WBS + ", Summary=" + Summary
-				+ ", Description=" + Description + ", Technical_Lead="
-				+ Technical_Lead + ", Program_Manager=" + Program_Manager
-				+ ", Project_Manager=" + Project_Manager
-				+ ", ProjectStartDate=" + ProjectStartDate
-				+ ", ProjectFinishDate=" + ProjectFinishDate + ", PDRDate="
-				+ PDRDate + ", CDRDate=" + CDRDate + ", InServiceDate="
-				+ InServiceDate + ", Key_Release=" + Key_Release
-				+ ", Site_URL=" + Site_URL + ", Priority=" + Priority
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
-	}
+		return "Project [wbs=" + wbs + ", summary=" + summary
+				+ ", description=" + description + ", technicalLead="
+				+ technicalLead + ", programManager=" + programManager
+				+ ", projectManager=" + projectManager + ", projectStartDate="
+				+ projectStartDate + ", projectFinishDate=" + projectFinishDate
+				+ ", pdrDate=" + pdrDate + ", cdrDate=" + cdrDate
+				+ ", inServiceDate=" + inServiceDate + ", keyRelease="
+				+ keyRelease + ", siteUrl=" + siteUrl + ", priority="
+				+ priority + ", toString()=" + super.toString() + "]";
+		}
+ 
 
 }

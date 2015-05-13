@@ -1,5 +1,7 @@
 package com.directv;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import net.rcarz.jiraclient.BasicCredentials;
@@ -32,9 +34,9 @@ public class Batch {
         reader.setResource(new ClassPathResource("ProjectInfoSharePoint_1.csv"));
         reader.setLineMapper(new DefaultLineMapper<Project>() {{
             setLineTokenizer(new DelimitedLineTokenizer() {{
-                setNames(new String[] { "Finance_Charge_Code", "ProjectName", "Technical_Lead",	"Program_Manager",
-                		"Project_Manager", "ProjectStartDate", "ProjectFinishDate",
-                		"PDR_Finish", "CDR_Finish",	"Client_InService_Release",	"Key_Release", "Site_URL", "Priority"});
+                setNames(new String[] {"wbs", "summary", "description",
+            			"technicalLead", "programManager","projectManager",
+            			"projectStartDate", "projectFinishDate","pdrDate","cdrDate", "inServiceDate", "keyRelease","siteUrl","priority"});
             }});
             setFieldSetMapper(new BeanWrapperFieldSetMapper<Project>() {{
                 setTargetType(Project.class);
@@ -50,18 +52,42 @@ public class Batch {
 
 			@Override
 			public void write(List<? extends Project> items) throws Exception {
+				BasicCredentials creds = new BasicCredentials("457172", "Tolivia000");
+		        JiraClient jira = new JiraClient("http://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
+				//Issue issue;
+				
 				for(Project item : items){
-					System.out.println("Sending to JIRA "+item);
+					//issue = jira.getIssue(item.getIssue("PRJ-256");
+					System.out.println("WBS: " + item.getWbs());
+					Issue.SearchResult sr = jira.searchIssues("wbs ~ "+item.getWbs());
+					  System.out.println("WBS: " + sr.total);
+					  if (sr.issues.size() > 1){ 
+						  System.out.println("Duplicate Record for : " + item.getWbs());
+					  }
+					  else if (sr.issues.size() == 0){ 
+						  //Create new Project
+						  System.out.println("Project not in Jira: " + item.getWbs());
+					  }
+					  else{//Edit existing Project
+						  final Issue issue = sr.issues.get(0);
+				          issue.update().field(Field.ASSIGNEE, "457172").execute();
+				          issue.update().field(Field.LABELS, new ArrayList() {{
+				        	  addAll(issue.getLabels());
+				        	  add("BAU");}}).execute();
+				          issue.update().field(Field.PRIORITY, "Medium").execute();
+						  System.out.println("Result: " + issue);
+					  }
 				}
 				//BasicCredentials creds = new BasicCredentials("XXX", "atitelovoydicir");
-				BasicCredentials creds = new BasicCredentials("elToli", "Oculta");
-		        JiraClient jira = new JiraClient("http://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
-				Issue issue = jira.getIssue("TBD-696");
-				issue.update().field(Field.SUMMARY, "Demo Description").execute();
-	            issue.update().field(Field.PRIORITY, "Critical").execute();
+				//BasicCredentials creds = new BasicCredentials("457172", "Tolivia000");
+		        //JiraClient jira = new JiraClient("http://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
+				//Issue issue = jira.getIssue("PRJ-256");
+				//issue.update().field(Field.SUMMARY, "Tolivia ye lo meyor").execute();
+	            //issue.update().field(Field.PRIORITY, "Critical").execute();
+	            //issue.update().field(Field.ASSIGNEE, "457172").execute();
 				//.fieldRemove(Field.LABELS, "foo")
 	            //.execute();
-		        System.out.println(issue);
+		        //System.out.println(issue);
 			}
 
         };
@@ -73,7 +99,6 @@ public class Batch {
                 .flow(s1)
                 .end()
                 .build();
-       
     }
 
     @Bean
@@ -83,6 +108,7 @@ public class Batch {
         		.allowStartIfComplete(true)
                 .<Project, Project> chunk(10)
                 .reader(reader)
+                //.processor(processor);
                 .writer(writer)
                 .build();
     }
