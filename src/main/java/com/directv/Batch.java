@@ -29,10 +29,12 @@ public class Batch {
     @Bean
     public ItemReader<Project> reader() {
         FlatFileItemReader<Project> reader = new FlatFileItemReader<Project>();
-        reader.setResource(new ClassPathResource("sample-data.csv"));
+        reader.setResource(new ClassPathResource("ProjectInfoSharePoint_1.csv"));
         reader.setLineMapper(new DefaultLineMapper<Project>() {{
             setLineTokenizer(new DelimitedLineTokenizer() {{
-                setNames(new String[] { "id", "name" });
+                setNames(new String[] { "Finance_Charge_Code", "ProjectName", "Technical_Lead",	"Program_Manager",
+                		"Project_Manager", "ProjectStartDate", "ProjectFinishDate",
+                		"PDR_Finish", "CDR_Finish",	"Client_InService_Release",	"Key_Release", "Site_URL", "Priority"});
             }});
             setFieldSetMapper(new BeanWrapperFieldSetMapper<Project>() {{
                 setTargetType(Project.class);
