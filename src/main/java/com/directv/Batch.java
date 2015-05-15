@@ -1,9 +1,8 @@
 package com.directv;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import net.rcarz.jiraclient.BasicCredentials;
 import net.rcarz.jiraclient.Field;
@@ -15,7 +14,6 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.file.FlatFileItemReader;
@@ -30,13 +28,6 @@ import org.springframework.core.io.ClassPathResource;
 @EnableBatchProcessing
 public class Batch {
 
-	Map<String,String> priorities = new HashMap<String,String>(){{
-		put("HP","Critical");
-		put("P1","High");
-		put("P2","Medium");
-		put("P3","Low");
-	}};
-	
     @Bean
     public ItemReader<Project> reader() {
         FlatFileItemReader<Project> reader = new FlatFileItemReader<Project>();
@@ -56,24 +47,12 @@ public class Batch {
 
     
     @Bean
-    public ItemProcessor<Project,Project> processor() {
-    	return new ItemProcessor<Project,Project>(){
-    	    @Override
-    	    public Project process(final Project project) throws Exception {
-    	    	project.setDescription(project.getDescription() + project.getSiteUrl());
-    	        project.setPriority(priorities.get(project.getPriority()));
-    	    	return project;
-    	    }
-    	};
-    }
-    
-    @Bean
     public ItemWriter<Project> writer() {
         return new ItemWriter<Project>(){
 
 			@Override
 			public void write(List<? extends Project> items) throws Exception {
-				BasicCredentials creds = new BasicCredentials("----", "------");
+				BasicCredentials creds = new BasicCredentials("457172", "Tolivia000");
 		        JiraClient jira = new JiraClient("http://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
 				//Issue issue;
 				
@@ -124,12 +103,12 @@ public class Batch {
 
     @Bean
     public Step step1(StepBuilderFactory stepBuilderFactory, ItemReader<Project> reader,
-            ItemWriter<Project> writer, ItemProcessor<Project,Project> processor) {
+            ItemWriter<Project> writer) {
         return stepBuilderFactory.get("step1")
         		.allowStartIfComplete(true)
                 .<Project, Project> chunk(10)
                 .reader(reader)
-                .processor(processor)
+                //.processor(processor);
                 .writer(writer)
                 .build();
     }
