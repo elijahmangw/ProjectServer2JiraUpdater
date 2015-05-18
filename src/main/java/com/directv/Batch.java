@@ -33,12 +33,13 @@ import org.springframework.core.io.ClassPathResource;
 @EnableBatchProcessing
 public class Batch {
 
-	Map<String,String> priorities = new HashMap<String,String>(){{
+	/*Not needed since Jira priorities changed to be same as in EPMO: HP, P2, P3, P4
+	 * Map<String,String> priorities = new HashMap<String,String>(){{
 		put("HP","Critical");
 		put("P1","High");
 		put("P2","Medium");
 		put("P3","Low");
-	}};
+	}};*/
 	
     @Bean
     public ItemReader<Project> reader() {
@@ -64,7 +65,7 @@ public class Batch {
     	    @Override
     	    public Project process(final Project project) throws Exception {
     	    	//project.setDescription(project.getDescription() + project.getSiteUrl());
-    	        project.setPriority(priorities.get(project.getPriority()));
+    	        project.setPriority(project.getPriority());
     	    	return project;
     	    }
     	};
@@ -76,7 +77,7 @@ public class Batch {
 
 			@Override
 			public void write(List<? extends Project> items) throws Exception {
-				BasicCredentials creds = new BasicCredentials("d457172", "Tolivia000");
+				BasicCredentials creds = new BasicCredentials("457172", "Tolivia000");
 				JiraClient jira = new JiraClient("http://jirctsdv-msdc01.ds.dtveng.net:8080", creds);
 				//BasicCredentials creds = new BasicCredentials("jira2psintegration", "Directv2015");
 				//JiraClient jira = new JiraClient("http://jirapppr-labc01.ds.dtvops.net", creds);
@@ -85,26 +86,26 @@ public class Batch {
 			    StringBuffer bufferExitos = new StringBuffer();
 			    StringBuffer bufferFallos = new StringBuffer();
 			    bufferExitos.append("*******Jira & Project Server Syncronizer*******");
-			    bufferExitos.append("\n");
-			    bufferExitos.append("START TIME: " + new Date() + " ");
-			    bufferExitos.append("\n");
+			    bufferExitos.append("\n\r"); 
+			    bufferExitos.append("[UPDATE STARTED]-START TIME: " + new Date() + " ");
+			    bufferExitos.append("\n\r");
 		        for(Project item : items){
-					System.out.print("WBS: " + item.getWbs());
-					if ((item.getWbs() != null) && !item.getWbs().isEmpty()){
+					System.out.println("WBS=" + item.getWbs());
+					if ((item.getWbs() != null) && !(item.getWbs().isEmpty())){
 						Issue.SearchResult sr = jira.searchIssues("wbs ~ " + item.getWbs());
-					    System.out.print(" :: " + sr.total + " Projects with WBS as : " + item.getWbs());
+					    System.out.print(" (0) :: " + sr.total + " Projects with WBS= " + item.getWbs());
 						  if (sr.issues.size() > 1){ 
-							  System.out.println(" :: Duplicate Entry for Project: " + item.getWbs());
+							  System.out.println(" (1) :: Duplicate Entry for Project: " + item.getWbs());
 							  bufferFallos.append(" " + sr.total + " Projects with WBS as : " + item.getWbs() + " ");
-							  bufferFallos.append("\n");
+							  bufferFallos.append("\n\r");
 							  bufferFallos.append("DUPLICATED :: Duplicate Entry for Project: " + item.getWbs() + " ");
-							  bufferFallos.append("\n");
+							  bufferFallos.append("\n\r");
 						  }
 						  else if (sr.issues.size() == 0){ 
 							  //Create new Project
-							  System.out.println(" :: Project Not Created in Jira: " + item.getWbs() + ": " + item.getSummary());
-							  bufferFallos.append("NOT FOUND :: Project Not Created in Jira: " + item.getWbs() + ": " + item.getSummary() + " ");
-							  bufferFallos.append("\n");
+							  System.out.println(" (2) :: Project Not Created in Jira: " + item.getWbs() + ": " + item.getSummary());
+							  bufferFallos.append("[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=" + item.getWbs() + ": " + item.getSummary() + " ");
+							  bufferFallos.append("\n\r");
 						  }
 						  else{//Edit existing Project
 							  final Issue issue = sr.issues.get(0);
@@ -112,22 +113,22 @@ public class Batch {
 					          if (!issue.getStatus().getDescription().equals("CLOSED"))
 					          {
 					        	  issue.update().field(Field.PRIORITY, item.getPriority()).execute();
-					        	  System.out.println(" :: Project " + issue.getKey() + " Updated to Priority: " + issue.getPriority());
+					        	  System.out.println(" (3) :: Project " + issue.getKey() + " Updated to Priority: " + issue.getPriority());
 					        	  bufferExitos.append("UPDATED :: Project " + issue.getKey() + " Updated to Priority: " + issue.getPriority());
-					        	  bufferExitos.append("\n");
+					        	  bufferExitos.append("\n\r");
 					          }
 					          else{
-					        	  bufferFallos.append(": " + issue.getKey() + "-" + item.getWbs() + " :: Project is CLOSED ");
-					        	  bufferFallos.append("\n");
+					        	  bufferFallos.append("[ERROR]-PROJECT IS CLOSED=" + item.getWbs() + "-" + issue.getKey());
+					        	  bufferFallos.append("\n\r");
 					          }
 						  }
 					}
-				    bufferFallos.append(": " + item.getSummary() + " - " + item.getDescription() + " :: WBS is EMPTY ");
-				    bufferFallos.append("\n");
+				    bufferFallos.append("[ERROR]-WBS FIELD EMPTY= " + item.getSummary());
+				    bufferFallos.append("\n\r");
 				}
-			    bufferFallos.append("END TIME: " + new Date() + " ");
-			    bufferFallos.append("\n");
-				BufferedWriter writer = new BufferedWriter( new FileWriter("logo.log"));
+			    bufferFallos.append("[UPDATE ENDED]-END TIME: " + new Date() + " ");
+			    bufferFallos.append("\n\r");
+				BufferedWriter writer = new BufferedWriter( new FileWriter("milog.log"));
 				writer.write(bufferExitos.toString());
 				writer.newLine();writer.newLine();
 				writer.write(bufferFallos.toString());
