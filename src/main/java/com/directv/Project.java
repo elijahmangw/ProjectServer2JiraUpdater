@@ -10,6 +10,7 @@ public class Project {
 	//information from ProjectServer site/report
 	private String wbs; //Finance_Charge_Code
 	private String summary; //ProjectName;
+	private String epmosummary; //EPMO Summary;
 	private String description;
 	private String technicalLead;
 	private String programManager;
@@ -56,6 +57,7 @@ public class Project {
 		return wbs;
 	}
 
+	
 	/**
 	 * @param wbs the wbs to set
 	 */
@@ -76,6 +78,22 @@ public class Project {
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}
+
+	/**
+	 * @return the epmosummary
+	 */
+	/*
+	public String getEpmosummary() {
+		return epmosummary;
+	}
+	*/
+	/**
+	 * @param epmosummary the epmosummary to set
+	 */
+	/*public void setEpmosummary(String epmosummary) {
+		this.epmosummary = epmosummary;
+	}*/
+
 
 	/**
 	 * @return the description
