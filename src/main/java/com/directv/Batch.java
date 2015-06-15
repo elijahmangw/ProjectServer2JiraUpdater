@@ -87,13 +87,13 @@ public class Batch {
        */
        //**PROD**
         //reader.setResource(new ClassPathResource("ExecProj.csv"));
-      //**DEV ENV**
+        //**DEV ENV**
         //String pathrsc = new String("\\\\common1\\common\\TEMPLATE\\ExecProj_150520.csv");
         //﻿Finance_Charge_Code,ProjectName,Project_Status_Summary,Project_Description,
         //Technical_Lead,Program_Manager,ProjectOwnerName,ProjectStartDate,ProjectFinishDate,PDR_Finish,CDR_Finish,
         //Client_HE_Release,Key_Release,Project_Priority,ProjectWorkspaceInternalHRef
 
-        String pathrsc = new String("ExecutionProjectDetailss.csv");
+        String pathrsc = new String("ExecutionProjectDetails150612.csv");
         reader.setResource(new ClassPathResource(pathrsc));
         reader.setLineMapper(new DefaultLineMapper<Project>() {{
             setLineTokenizer(new DelimitedLineTokenizer() {{
