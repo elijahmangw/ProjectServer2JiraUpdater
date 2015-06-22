@@ -7,10 +7,10 @@ package com.directv;
  */
 public class Project {
 
-	//information from ProjectServer site/report
+	//information from ProjectServer site/report -- total 17 processed fields
 	private String wbs; //Finance_Charge_Code
 	private String summary; //ProjectName;
-	private String epmosummary; //EPMO Summary;
+	private String epmosummary; //EPMO Summary; -- Not used 
 	private String description;
 	private String technicalLead;
 	private String programManager;
@@ -21,8 +21,12 @@ public class Project {
 	private String cdrDate; //CDR_Finish;
 	private String inServiceDate; //Client_InService_Release;
 	private String keyRelease;
-	private String siteUrl;
 	private String priority;
+	private String siteUrl;
+	private String programMgrAccount;
+	private String projectMgrAccount;
+	private String prj;
+	
 
     public Project() {
     	
@@ -263,21 +267,80 @@ public class Project {
 		this.priority = priority;
 	}
 
+
+	/**
+	 * @return the epmosummary
+	 */
+	public String getEpmosummary() {
+		return epmosummary;
+	}
+
+	/**
+	 * @param epmosummary the epmosummary to set
+	 */
+	public void setEpmosummary(String epmosummary) {
+		this.epmosummary = epmosummary;
+	}
+
+	/**
+	 * @return the programMgrAccount
+	 */
+	public String getProgramMgrAccount() {
+		return programMgrAccount;
+	}
+
+	/**
+	 * @param programMgrAccount the programMgrAccount to set
+	 */
+	public void setProgramMgrAccount(String programMgrAccount) {
+		this.programMgrAccount = programMgrAccount;
+	}
+
+	/**
+	 * @return the projectMgrAccount
+	 */
+	public String getProjectMgrAccount() {
+		return projectMgrAccount;
+	}
+
+	/**
+	 * @param projectMgrAccount the projectMgrAccount to set
+	 */
+	public void setProjectMgrAccount(String projectMgrAccount) {
+		this.projectMgrAccount = projectMgrAccount;
+	}
+
+	/**
+	 * @return the prj
+	 */
+	public String getPrj() {
+		return prj;
+	}
+
+	/**
+	 * @param prj the prj to set
+	 */
+	public void setPrj(String prj) {
+		this.prj = prj;
+	}
+ 
 	  /* (non-Javadoc)
-		 * @see java.lang.Object#toString()
-		 */
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		return "Project [wbs=" + wbs + ", summary=" + summary
-				+ ", description=" + description + ", technicalLead="
-				+ technicalLead + ", programManager=" + programManager
-				+ ", projectManager=" + projectManager + ", projectStartDate="
-				+ projectStartDate + ", projectFinishDate=" + projectFinishDate
-				+ ", pdrDate=" + pdrDate + ", cdrDate=" + cdrDate
-				+ ", inServiceDate=" + inServiceDate + ", keyRelease="
-				+ keyRelease + ", siteUrl=" + siteUrl + ", priority="
-				+ priority + ", toString()=" + super.toString() + "]";
-		}
- 
+				+ ", epmosummary=" + epmosummary + ", description="
+				+ description + ", technicalLead=" + technicalLead
+				+ ", programManager=" + programManager + ", projectManager="
+				+ projectManager + ", projectStartDate=" + projectStartDate
+				+ ", projectFinishDate=" + projectFinishDate + ", pdrDate="
+				+ pdrDate + ", cdrDate=" + cdrDate + ", inServiceDate="
+				+ inServiceDate + ", keyRelease=" + keyRelease + ", priority="
+				+ priority + ", siteUrl=" + siteUrl + ", programMgrAccount="
+				+ programMgrAccount + ", projectMgrAccount="
+				+ projectMgrAccount + ", prj=" + prj + "]";
+	}
+
 
 }

@@ -1,0 +1,595 @@
+*******JIRA-PROJECT SERVER SYNCRONIZER*******
+[UPDATE STARTED]-START TIME: Fri Jun 19 14:12:05 PDT 2015 
+[UPDATED]-Project PRJ-239 CDR Date Updated from 2015-02-25 to: 2/25/2015 12:00:00 PM
+[UPDATED]-Project PRJ-239 PDR Date Updated from 2015-01-29 to: 1/29/2015 6:00:00 AM
+[UPDATED]-Project PRJ-239 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-239 End Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-262 In-Service Date Updated from 2016-02-16 to: 2/16/2016 8:00:00 AM
+[UPDATED]-Project PRJ-262 CDR Date Updated from 2015-09-15 to: 9/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-262 PDR Date Updated from 2015-08-19 to: 8/19/2015 8:00:00 AM
+[UPDATED]-Project PRJ-262 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-262 End Date Updated from 2016-04-25 to: 4/25/2016 5:00:00 PM
+[UPDATED]-Project PRJ-40 Technical Lead Updated from null  to: 
+[UPDATED]-Project PRJ-40 In-Service Date Updated from 2014-12-31 to: 12/31/2014 9:00:00 AM
+[UPDATED]-Project PRJ-40 CDR Date Updated from 2014-02-04 to: 2/4/2014 9:00:00 AM
+[UPDATED]-Project PRJ-40 PDR Date Updated from 2014-01-14 to: 1/14/2014 9:00:00 AM
+[UPDATED]-Project PRJ-40 Start Date Updated from 2013-03-11 to: 3/11/2013 9:00:00 AM
+[UPDATED]-Project PRJ-40 End Date Updated from 2014-12-31 to: 12/31/2014 6:00:00 PM
+[UPDATED]-Project PRJ-263 Technical Lead Updated from null  to: 
+[UPDATED]-Project PRJ-263 In-Service Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-263 CDR Date Updated from 2015-06-19 to: 6/19/2015 8:00:00 AM
+[UPDATED]-Project PRJ-263 PDR Date Updated from 2015-06-05 to: 6/5/2015 8:00:00 AM
+[UPDATED]-Project PRJ-263 Start Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-263 End Date Updated from 2016-04-01 to: 4/1/2016 5:00:00 PM
+[UPDATED]-Project PRJ-19 CDR Date Updated from 2015-07-02 to: 7/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-19 PDR Date Updated from 2015-06-04 to: 6/4/2015 8:00:00 AM
+[UPDATED]-Project PRJ-19 Start Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-19 End Date Updated from 2016-05-30 to: 5/30/2016 12:00:00 AM
+[UPDATED]-Project PRJ-250 In-Service Date Updated from 2015-04-10 to: 4/10/2015 5:00:00 PM
+[UPDATED]-Project PRJ-250 CDR Date Updated from 2015-01-28 to: 1/28/2015 5:00:00 PM
+[UPDATED]-Project PRJ-250 PDR Date Updated from 2015-01-28 to: 1/28/2015 5:00:00 PM
+[UPDATED]-Project PRJ-250 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-250 End Date Updated from 2015-08-31 to: 8/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-65 In-Service Date Updated from 2015-09-14 to: 9/14/2015 8:00:00 AM
+[UPDATED]-Project PRJ-65 CDR Date Updated from 2014-06-25 to: 6/25/2014 5:00:00 PM
+[UPDATED]-Project PRJ-65 PDR Date Updated from 2014-05-21 to: 5/21/2014 5:00:00 PM
+[UPDATED]-Project PRJ-65 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-65 End Date Updated from 2016-09-30 to: 9/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-264 Technical Lead Updated from null  to: 
+[UPDATED]-Project PRJ-264 In-Service Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-264 CDR Date Updated from 2015-06-19 to: 6/19/2015 8:00:00 AM
+[UPDATED]-Project PRJ-264 PDR Date Updated from 2015-06-05 to: 6/5/2015 8:00:00 AM
+[UPDATED]-Project PRJ-264 Start Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-264 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-266 In-Service Date Updated from 2015-10-23 to: 10/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-266 CDR Date Updated from 2015-06-26 to: 6/26/2015 5:00:00 PM
+[UPDATED]-Project PRJ-266 PDR Date Updated from 2015-06-05 to: 6/5/2015 5:00:00 PM
+[UPDATED]-Project PRJ-266 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-266 End Date Updated from 2016-02-02 to: 2/2/2016 5:00:00 PM
+[UPDATED]-Project PRJ-78 In-Service Date Updated from 2015-10-23 to: 10/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-78 CDR Date Updated from 2015-03-18 to: 3/18/2015 8:00:00 AM
+[UPDATED]-Project PRJ-78 PDR Date Updated from 2015-01-28 to: 1/28/2015 8:00:00 AM
+[UPDATED]-Project PRJ-78 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-78 End Date Updated from 2016-08-12 to: 8/12/2016 5:00:00 PM
+[UPDATED]-Project PRJ-30 Technical Lead Updated from null  to: 
+[UPDATED]-Project PRJ-30 In-Service Date Updated from 2015-11-30 to: 11/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-30 CDR Date Updated from 2013-11-01 to: 11/1/2013 5:00:00 PM
+[UPDATED]-Project PRJ-30 PDR Date Updated from 2013-11-25 to: 11/25/2013 5:00:00 PM
+[UPDATED]-Project PRJ-30 Start Date Updated from 2013-10-28 to: 10/28/2013 8:00:00 AM
+[UPDATED]-Project PRJ-30 End Date Updated from 2015-12-22 to: 12/22/2015 5:00:00 PM
+[UPDATED]-Project PRJ-111 In-Service Date Updated from 2015-08-20 to: 8/20/2015 5:00:00 PM
+[UPDATED]-Project PRJ-111 CDR Date Updated from 2015-02-20 to: 2/20/2015 5:00:00 PM
+[UPDATED]-Project PRJ-111 PDR Date Updated from 2014-12-18 to: 12/18/2014 5:00:00 PM
+[UPDATED]-Project PRJ-111 Start Date Updated from 2014-06-04 to: 6/4/2014 8:00:00 AM
+[UPDATED]-Project PRJ-111 End Date Updated from 2016-02-05 to: 2/5/2016 5:00:00 PM
+[UPDATED]-Project PRJ-113 In-Service Date Updated from 2015-06-26 to: 6/26/2015 8:00:00 AM
+[UPDATED]-Project PRJ-113 CDR Date Updated from 2014-11-13 to: 11/13/2014 5:00:00 PM
+[UPDATED]-Project PRJ-113 PDR Date Updated from 2014-10-23 to: 10/23/2014 5:00:00 PM
+[UPDATED]-Project PRJ-113 Start Date Updated from 2014-06-04 to: 6/4/2014 8:00:00 AM
+[UPDATED]-Project PRJ-113 End Date Updated from 2015-07-31 to: 7/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-79 In-Service Date Updated from 2015-06-02 to: 6/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-79 CDR Date Updated from 2014-06-20 to: 6/20/2014 8:00:00 AM
+[UPDATED]-Project PRJ-79 PDR Date Updated from 2014-08-15 to: 8/15/2014 5:00:00 PM
+[UPDATED]-Project PRJ-79 Start Date Updated from 2014-03-05 to: 3/5/2014 8:00:00 AM
+[UPDATED]-Project PRJ-79 End Date Updated from 2015-09-15 to: 9/15/2015 5:00:00 PM
+[UPDATED]-Project PRJ-157 In-Service Date Updated from 2015-09-03 to: 9/3/2015 8:00:00 AM
+[UPDATED]-Project PRJ-157 CDR Date Updated from 2015-03-18 to: 3/18/2015 8:00:00 AM
+[UPDATED]-Project PRJ-157 PDR Date Updated from 2015-03-05 to: 3/5/2015 8:00:00 AM
+[UPDATED]-Project PRJ-157 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-157 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-213 In-Service Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-213 CDR Date Updated from 2015-02-25 to: 2/25/2015 12:00:00 PM
+[UPDATED]-Project PRJ-213 PDR Date Updated from 2015-01-29 to: 1/29/2015 6:00:00 AM
+[UPDATED]-Project PRJ-213 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-213 End Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-205 CDR Date Updated from 2014-12-17 to: 12/17/2014 5:00:00 PM
+[UPDATED]-Project PRJ-205 PDR Date Updated from 2014-09-24 to: 9/24/2014 5:00:00 PM
+[UPDATED]-Project PRJ-205 Start Date Updated from 2014-07-15 to: 7/15/2014 8:00:00 AM
+[UPDATED]-Project PRJ-205 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-167 In-Service Date Updated from 2016-01-29 to: 1/29/2016 8:00:00 AM
+[UPDATED]-Project PRJ-167 CDR Date Updated from 2015-07-10 to: 7/10/2015 5:00:00 PM
+[UPDATED]-Project PRJ-167 PDR Date Updated from 2015-05-06 to: 5/6/2015 8:00:00 AM
+[UPDATED]-Project PRJ-167 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-167 End Date Updated from 2016-06-30 to: 6/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-180 In-Service Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-180 CDR Date Updated from 2015-06-08 to: 6/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-180 PDR Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-180 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-180 End Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-192 In-Service Date Updated from 2016-03-14 to: 3/14/2016 8:00:00 AM
+[UPDATED]-Project PRJ-192 CDR Date Updated from 2015-07-14 to: 7/14/2015 8:00:00 AM
+[UPDATED]-Project PRJ-192 PDR Date Updated from 2015-06-17 to: 6/17/2015 8:00:00 AM
+[UPDATED]-Project PRJ-192 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-192 End Date Updated from 2016-03-14 to: 3/14/2016 8:00:00 AM
+[UPDATED]-Project PRJ-16 PDR Date Updated from 2015-01-30 to: 1/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-16 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-16 End Date Updated from 2016-06-29 to: 6/29/2016 5:00:00 PM
+[UPDATED]-Project PRJ-244 In-Service Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-244 CDR Date Updated from 2015-03-31 to: 3/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-244 PDR Date Updated from 2015-03-30 to: 3/30/2015 8:00:00 AM
+[UPDATED]-Project PRJ-244 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-244 End Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-23 In-Service Date Updated from 2016-04-05 to: 4/5/2016 5:00:00 PM
+[UPDATED]-Project PRJ-23 CDR Date Updated from 2015-06-26 to: 6/26/2015 5:00:00 PM
+[UPDATED]-Project PRJ-23 PDR Date Updated from 2015-05-29 to: 5/29/2015 5:00:00 PM
+[UPDATED]-Project PRJ-23 Start Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-23 End Date Updated from 2016-06-01 to: 6/1/2016 5:00:00 PM
+[UPDATED]-Project PRJ-68 In-Service Date Updated from 2015-08-07 to: 8/7/2015 8:00:00 AM
+[UPDATED]-Project PRJ-68 CDR Date Updated from 2014-09-12 to: 9/12/2014 5:00:00 PM
+[UPDATED]-Project PRJ-68 PDR Date Updated from 2014-07-18 to: 7/18/2014 8:00:00 AM
+[UPDATED]-Project PRJ-68 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-68 End Date Updated from 2016-03-18 to: 3/18/2016 5:00:00 PM
+[UPDATED]-Project PRJ-156 In-Service Date Updated from 2016-02-01 to: 2/1/2016 5:00:00 PM
+[UPDATED]-Project PRJ-156 CDR Date Updated from 2015-06-29 to: 6/29/2015 5:00:00 PM
+[UPDATED]-Project PRJ-156 PDR Date Updated from 2015-06-08 to: 6/8/2015 5:00:00 PM
+[UPDATED]-Project PRJ-156 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-156 End Date Updated from 2016-03-04 to: 3/4/2016 5:00:00 PM
+[UPDATED]-Project PRJ-194 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-194 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-194 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-194 Start Date Updated from 2014-11-19 to: 11/19/2014 8:00:00 AM
+[UPDATED]-Project PRJ-194 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-67 In-Service Date Updated from 2015-09-29 to: 9/29/2015 8:00:00 AM
+[UPDATED]-Project PRJ-67 CDR Date Updated from 2014-12-09 to: 12/9/2014 5:00:00 PM
+[UPDATED]-Project PRJ-67 PDR Date Updated from 2014-10-29 to: 10/29/2014 5:00:00 PM
+[UPDATED]-Project PRJ-67 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-67 End Date Updated from 2025-05-22 to: 5/22/2025 5:00:00 PM
+[UPDATED]-Project PRJ-173 Technical Lead Updated from null  to: 
+[UPDATED]-Project PRJ-173 In-Service Date Updated from 2016-02-03 to: 2/3/2016 5:00:00 PM
+[UPDATED]-Project PRJ-173 CDR Date Updated from 2015-06-16 to: 6/16/2015 5:00:00 PM
+[UPDATED]-Project PRJ-173 PDR Date Updated from 2015-05-26 to: 5/26/2015 5:00:00 PM
+[UPDATED]-Project PRJ-173 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-173 End Date Updated from 2016-04-01 to: 4/1/2016 8:01:00 AM
+[UPDATED]-Project PRJ-75 In-Service Date Updated from 2015-07-10 to: 7/10/2015 8:00:00 AM
+[UPDATED]-Project PRJ-75 CDR Date Updated from 2014-07-21 to: 7/21/2014 5:00:00 PM
+[UPDATED]-Project PRJ-75 PDR Date Updated from 2014-05-07 to: 5/7/2014 5:00:00 PM
+[UPDATED]-Project PRJ-75 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-75 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-74 In-Service Date Updated from 2015-09-01 to: 9/1/2015 5:00:00 PM
+[UPDATED]-Project PRJ-74 CDR Date Updated from 2014-07-02 to: 7/2/2014 5:00:00 PM
+[UPDATED]-Project PRJ-74 PDR Date Updated from 2014-04-23 to: 4/23/2014 5:00:00 PM
+[UPDATED]-Project PRJ-74 Start Date Updated from 2014-02-07 to: 2/7/2014 8:00:00 AM
+[UPDATED]-Project PRJ-74 End Date Updated from 2016-02-03 to: 2/3/2016 5:00:00 PM
+[UPDATED]-Project PRJ-201 CDR Date Updated from 2014-04-17 to: 4/17/2014 5:00:00 PM
+[UPDATED]-Project PRJ-201 PDR Date Updated from 2014-04-17 to: 4/17/2014 5:00:00 PM
+[UPDATED]-Project PRJ-201 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-201 End Date Updated from 2015-11-03 to: 11/3/2015 8:00:00 AM
+[UPDATED]-Project PRJ-163 In-Service Date Updated from 2016-03-09 to: 3/9/2016 8:00:00 AM
+[UPDATED]-Project PRJ-163 CDR Date Updated from 2015-05-07 to: 5/7/2015 8:00:00 AM
+[UPDATED]-Project PRJ-163 PDR Date Updated from 2015-04-20 to: 4/20/2015 8:00:00 AM
+[UPDATED]-Project PRJ-163 Start Date Updated from 2015-04-01 to: 4/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-163 End Date Updated from 2016-06-30 to: 6/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-46 In-Service Date Updated from 2015-06-22 to: 6/22/2015 8:00:00 AM
+[UPDATED]-Project PRJ-46 CDR Date Updated from 2014-09-11 to: 9/11/2014 5:00:00 PM
+[UPDATED]-Project PRJ-46 PDR Date Updated from 2014-06-26 to: 6/26/2014 5:00:00 PM
+[UPDATED]-Project PRJ-46 Start Date Updated from 2014-03-28 to: 3/28/2014 8:00:00 AM
+[UPDATED]-Project PRJ-46 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-46 In-Service Date Updated from 2015-06-22 to: 6/22/2015 8:00:00 AM
+[UPDATED]-Project PRJ-46 CDR Date Updated from 2014-09-11 to: 9/11/2014 5:00:00 PM
+[UPDATED]-Project PRJ-46 PDR Date Updated from 2014-06-26 to: 6/26/2014 5:00:00 PM
+[UPDATED]-Project PRJ-46 Start Date Updated from 2014-03-28 to: 3/28/2014 8:00:00 AM
+[UPDATED]-Project PRJ-46 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-260 In-Service Date Updated from 2015-11-02 to: 11/2/2015 5:00:00 PM
+[UPDATED]-Project PRJ-260 CDR Date Updated from 2015-07-06 to: 7/6/2015 5:00:00 PM
+[UPDATED]-Project PRJ-260 PDR Date Updated from 2015-06-08 to: 6/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-260 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-260 End Date Updated from 2015-12-31 to: 12/31/2015 12:00:00 AM
+[UPDATED]-Project PRJ-72 In-Service Date Updated from 2015-11-02 to: 11/2/2015 5:00:00 PM
+[UPDATED]-Project PRJ-72 CDR Date Updated from 2014-08-13 to: 8/13/2014 5:00:00 PM
+[UPDATED]-Project PRJ-72 PDR Date Updated from 2014-06-03 to: 6/3/2014 5:00:00 PM
+[UPDATED]-Project PRJ-72 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-72 End Date Updated from 2016-03-25 to: 3/25/2016 5:00:00 PM
+[UPDATED]-Project PRJ-203 CDR Date Updated from 2014-08-26 to: 8/26/2014 5:00:00 PM
+[UPDATED]-Project PRJ-203 PDR Date Updated from 2014-05-29 to: 5/29/2014 5:00:00 PM
+[UPDATED]-Project PRJ-203 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-203 End Date Updated from 2016-05-31 to: 5/31/2016 5:00:00 PM
+[UPDATED]-Project PRJ-166 In-Service Date Updated from 2016-03-28 to: 3/28/2016 8:00:00 AM
+[UPDATED]-Project PRJ-166 CDR Date Updated from 2015-08-25 to: 8/25/2015 8:00:00 AM
+[UPDATED]-Project PRJ-166 PDR Date Updated from 2015-07-06 to: 7/6/2015 8:00:00 AM
+[UPDATED]-Project PRJ-166 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-166 End Date Updated from 2016-03-31 to: 3/31/2016 5:00:00 PM
+[UPDATED]-Project PRJ-183 In-Service Date Updated from 2015-07-22 to: 7/22/2015 5:00:00 PM
+[UPDATED]-Project PRJ-183 CDR Date Updated from 2015-03-13 to: 3/13/2015 5:00:00 PM
+[UPDATED]-Project PRJ-183 PDR Date Updated from 2015-02-13 to: 2/13/2015 5:00:00 PM
+[UPDATED]-Project PRJ-183 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-183 End Date Updated from 2016-02-01 to: 2/1/2016 5:00:00 PM
+[UPDATED]-Project PRJ-95 In-Service Date Updated from 2015-03-12 to: 3/12/2015 5:00:00 PM
+[UPDATED]-Project PRJ-95 CDR Date Updated from 2014-07-30 to: 7/30/2014 5:00:00 PM
+[UPDATED]-Project PRJ-95 PDR Date Updated from 2014-07-30 to: 7/30/2014 5:00:00 PM
+[UPDATED]-Project PRJ-95 Start Date Updated from 2014-02-12 to: 2/12/2014 8:00:00 AM
+[UPDATED]-Project PRJ-95 End Date Updated from 2015-06-15 to: 6/15/2015 5:00:00 PM
+[UPDATED]-Project PRJ-20 In-Service Date Updated from 2016-04-13 to: 4/13/2016 5:00:00 PM
+[UPDATED]-Project PRJ-20 CDR Date Updated from 2015-06-25 to: 6/25/2015 5:00:00 PM
+[UPDATED]-Project PRJ-20 PDR Date Updated from 2015-06-04 to: 6/4/2015 5:00:00 PM
+[UPDATED]-Project PRJ-20 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-20 End Date Updated from 2016-04-29 to: 4/29/2016 5:00:00 PM
+[UPDATED]-Project PRJ-99 CDR Date Updated from 2014-11-17 to: 11/17/2014 5:00:00 PM
+[UPDATED]-Project PRJ-99 PDR Date Updated from 2014-09-10 to: 9/10/2014 5:00:00 PM
+[UPDATED]-Project PRJ-99 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-99 End Date Updated from 2016-03-22 to: 3/22/2016 5:00:00 PM
+[UPDATED]-Project PRJ-4 CDR Date Updated from 2015-01-15 to: 1/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-4 PDR Date Updated from 2015-01-15 to: 1/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-4 Start Date Updated from 2014-12-01 to: 12/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-4 End Date Updated from 2016-01-29 to: 1/29/2016 5:00:00 PM
+[UPDATED]-Project PRJ-252 In-Service Date Updated from 2015-06-30 to: 6/30/2015 8:00:00 AM
+[UPDATED]-Project PRJ-252 CDR Date Updated from 2015-09-30 to: 9/30/2015 8:00:00 AM
+[UPDATED]-Project PRJ-252 PDR Date Updated from 2015-07-08 to: 7/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-252 Start Date Updated from 2015-01-26 to: 1/26/2015 8:00:00 AM
+[UPDATED]-Project PRJ-252 End Date Updated from 2016-12-30 to: 12/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-148 PDR Date Updated from 2015-02-17 to: 2/17/2015 5:00:00 PM
+[UPDATED]-Project PRJ-148 Start Date Updated from 2014-07-14 to: 7/14/2014 8:00:00 AM
+[UPDATED]-Project PRJ-148 End Date Updated from 2016-03-15 to: 3/15/2016 5:00:00 PM
+[UPDATED]-Project PRJ-249 CDR Date Updated from 2015-03-27 to: 3/27/2015 12:00:00 PM
+[UPDATED]-Project PRJ-249 PDR Date Updated from 2015-02-23 to: 2/23/2015 12:00:00 PM
+[UPDATED]-Project PRJ-249 Start Date Updated from 2014-12-01 to: 12/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-249 End Date Updated from 2015-10-30 to: 10/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-15 In-Service Date Updated from 2015-10-14 to: 10/14/2015 5:00:00 PM
+[UPDATED]-Project PRJ-15 CDR Date Updated from 2015-03-23 to: 3/23/2015 5:00:00 PM
+[UPDATED]-Project PRJ-15 PDR Date Updated from 2015-03-13 to: 3/13/2015 5:00:00 PM
+[UPDATED]-Project PRJ-15 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-15 End Date Updated from 2015-11-16 to: 11/16/2015 5:00:00 PM
+[UPDATED]-Project PRJ-204 CDR Date Updated from 2014-11-21 to: 11/21/2014 5:00:00 PM
+[UPDATED]-Project PRJ-204 PDR Date Updated from 2014-07-02 to: 7/2/2014 5:00:00 PM
+[UPDATED]-Project PRJ-204 Start Date Updated from 2014-02-27 to: 2/27/2014 8:00:00 AM
+[UPDATED]-Project PRJ-204 End Date Updated from 2015-10-26 to: 10/26/2015 5:00:00 PM
+[UPDATED]-Project PRJ-13 In-Service Date Updated from 2016-06-03 to: 6/3/2016 8:00:00 AM
+[UPDATED]-Project PRJ-13 CDR Date Updated from 2015-06-29 to: 6/29/2015 8:00:00 AM
+[UPDATED]-Project PRJ-13 PDR Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-13 Start Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-13 End Date Updated from 2016-06-03 to: 6/3/2016 5:00:00 PM
+[UPDATED]-Project PRJ-247 CDR Date Updated from 2015-01-30 to: 1/30/2015 12:00:00 AM
+[UPDATED]-Project PRJ-247 PDR Date Updated from 2015-01-09 to: 1/9/2015 12:00:00 AM
+[UPDATED]-Project PRJ-247 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-247 End Date Updated from 2015-09-30 to: 9/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-58 CDR Date Updated from 2014-02-26 to: 2/26/2014 5:00:00 PM
+[UPDATED]-Project PRJ-58 PDR Date Updated from 2013-10-30 to: 10/30/2013 5:00:00 PM
+[UPDATED]-Project PRJ-58 Start Date Updated from 2013-07-01 to: 7/1/2013 8:00:00 AM
+[UPDATED]-Project PRJ-58 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-255 In-Service Date Updated from 2016-01-29 to: 1/29/2016 5:00:00 PM
+[UPDATED]-Project PRJ-255 CDR Date Updated from 2015-06-17 to: 6/17/2015 8:00:00 AM
+[UPDATED]-Project PRJ-255 PDR Date Updated from 2015-05-14 to: 5/14/2015 8:00:00 AM
+[UPDATED]-Project PRJ-255 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-255 End Date Updated from 2016-07-06 to: 7/6/2016 12:00:00 AM
+[UPDATED]-Project PRJ-202 CDR Date Updated from 2015-07-15 to: 7/15/2015 5:00:00 PM
+[UPDATED]-Project PRJ-202 PDR Date Updated from 2015-06-25 to: 6/25/2015 5:00:00 PM
+[UPDATED]-Project PRJ-202 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-202 End Date Updated from 2016-12-30 to: 12/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-25 CDR Date Updated from 2015-01-13 to: 1/13/2015 5:00:00 PM
+[UPDATED]-Project PRJ-25 PDR Date Updated from 2014-12-16 to: 12/16/2014 5:00:00 PM
+[UPDATED]-Project PRJ-25 Start Date Updated from 2014-09-19 to: 9/19/2014 8:00:00 AM
+[UPDATED]-Project PRJ-25 End Date Updated from 2015-09-01 to: 9/1/2015 5:00:00 PM
+[UPDATED]-Project PRJ-27 In-Service Date Updated from 2015-06-22 to: 6/22/2015 5:00:00 PM
+[UPDATED]-Project PRJ-27 CDR Date Updated from 2014-10-07 to: 10/7/2014 5:00:00 PM
+[UPDATED]-Project PRJ-27 PDR Date Updated from 2014-05-16 to: 5/16/2014 5:00:00 PM
+[UPDATED]-Project PRJ-27 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-27 End Date Updated from 2017-02-02 to: 2/2/2017 5:00:00 PM
+[UPDATED]-Project PRJ-258 In-Service Date Updated from 2015-07-23 to: 7/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-258 CDR Date Updated from 2015-07-06 to: 7/6/2015 5:00:00 PM
+[UPDATED]-Project PRJ-258 PDR Date Updated from 2015-06-29 to: 6/29/2015 8:00:00 AM
+[UPDATED]-Project PRJ-258 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-258 End Date Updated from 2016-03-17 to: 3/17/2016 5:00:00 PM
+[UPDATED]-Project PRJ-259 In-Service Date Updated from 2016-01-04 to: 1/4/2016 5:00:00 PM
+[UPDATED]-Project PRJ-259 CDR Date Updated from 2015-07-24 to: 7/24/2015 8:00:00 AM
+[UPDATED]-Project PRJ-259 PDR Date Updated from 2015-06-26 to: 6/26/2015 8:00:00 AM
+[UPDATED]-Project PRJ-259 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-259 End Date Updated from 2016-01-22 to: 1/22/2016 8:00:00 AM
+[UPDATED]-Project PRJ-131 CDR Date Updated from 2015-08-18 to: 8/18/2015 8:00:00 AM
+[UPDATED]-Project PRJ-131 PDR Date Updated from 2015-08-03 to: 8/3/2015 8:00:00 AM
+[UPDATED]-Project PRJ-131 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-131 End Date Updated from 2019-01-02 to: 1/2/2019 5:00:00 PM
+[UPDATED]-Project PRJ-162 In-Service Date Updated from 2015-12-18 to: 12/18/2015 8:00:00 AM
+[UPDATED]-Project PRJ-162 CDR Date Updated from 2015-06-19 to: 6/19/2015 8:00:00 AM
+[UPDATED]-Project PRJ-162 PDR Date Updated from 2015-05-04 to: 5/4/2015 8:00:00 AM
+[UPDATED]-Project PRJ-162 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-162 End Date Updated from 2017-01-09 to: 1/9/2017 5:00:00 PM
+[UPDATED]-Project PRJ-254 Technical Lead Updated from null  to: 
+[UPDATED]-Project PRJ-254 In-Service Date Updated from 2016-01-06 to: 1/6/2016 8:00:00 AM
+[UPDATED]-Project PRJ-254 CDR Date Updated from 2015-04-27 to: 4/27/2015 8:00:00 AM
+[UPDATED]-Project PRJ-254 PDR Date Updated from 2015-03-30 to: 3/30/2015 8:00:00 AM
+[UPDATED]-Project PRJ-254 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-254 End Date Updated from 2016-07-06 to: 7/6/2016 12:00:00 AM
+[UPDATED]-Project PRJ-77 In-Service Date Updated from 2015-09-24 to: 9/24/2015 8:00:00 AM
+[UPDATED]-Project PRJ-77 CDR Date Updated from 2014-08-12 to: 8/12/2014 5:00:00 PM
+[UPDATED]-Project PRJ-77 PDR Date Updated from 2014-08-12 to: 8/12/2014 5:00:00 PM
+[UPDATED]-Project PRJ-77 Start Date Updated from 2014-01-02 to: 1/2/2014 8:00:00 AM
+[UPDATED]-Project PRJ-77 End Date Updated from 2015-11-30 to: 11/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-70 CDR Date Updated from 2015-03-13 to: 3/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-70 PDR Date Updated from 2014-09-29 to: 9/29/2014 8:00:00 AM
+[UPDATED]-Project PRJ-70 Start Date Updated from 2014-04-14 to: 4/14/2014 8:00:00 AM
+[UPDATED]-Project PRJ-70 End Date Updated from 2016-12-30 to: 12/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-241 In-Service Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-241 CDR Date Updated from 2015-06-01 to: 6/1/2015 5:00:00 PM
+[UPDATED]-Project PRJ-241 PDR Date Updated from 2015-05-06 to: 5/6/2015 5:00:00 PM
+[UPDATED]-Project PRJ-241 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-241 End Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-243 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-243 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-243 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-243 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-243 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-246 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-246 CDR Date Updated from 2015-05-07 to: 5/7/2015 8:00:00 AM
+[UPDATED]-Project PRJ-246 PDR Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-246 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-246 End Date Updated from 2016-03-02 to: 3/2/2016 5:00:00 PM
+[UPDATED]-Project PRJ-116 CDR Date Updated from 2015-02-27 to: 2/27/2015 8:00:00 AM
+[UPDATED]-Project PRJ-116 PDR Date Updated from 2015-01-09 to: 1/9/2015 8:00:00 AM
+[UPDATED]-Project PRJ-116 Start Date Updated from 2014-09-19 to: 9/19/2014 8:00:00 AM
+[UPDATED]-Project PRJ-116 End Date Updated from 2016-04-29 to: 4/29/2016 5:00:00 PM
+[UPDATED]-Project PRJ-146 In-Service Date Updated from 2015-10-05 to: 10/5/2015 5:00:00 PM
+[UPDATED]-Project PRJ-146 CDR Date Updated from 2015-04-23 to: 4/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-146 PDR Date Updated from 2015-04-22 to: 4/22/2015 8:00:00 AM
+[UPDATED]-Project PRJ-146 Start Date Updated from 2014-10-23 to: 10/23/2014 8:00:00 AM
+[UPDATED]-Project PRJ-146 End Date Updated from 2015-10-30 to: 10/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-231 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-231 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-231 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-231 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-231 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-233 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-233 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-233 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-233 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-233 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-232 In-Service Date Updated from 2015-06-21 to: 6/21/2015 1:12:00 AM
+[UPDATED]-Project PRJ-232 CDR Date Updated from 2015-01-19 to: 1/19/2015 9:36:00 PM
+[UPDATED]-Project PRJ-232 PDR Date Updated from 2015-01-10 to: 1/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-232 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-232 End Date Updated from 2015-07-06 to: 7/6/2015 12:00:00 AM
+[UPDATED]-Project PRJ-234 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-234 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-234 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-234 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-234 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-209 CDR Date Updated from 2014-12-18 to: 12/18/2014 8:00:00 AM
+[UPDATED]-Project PRJ-209 PDR Date Updated from 2014-10-23 to: 10/23/2014 8:00:00 AM
+[UPDATED]-Project PRJ-209 Start Date Updated from 2014-10-23 to: 10/23/2014 8:00:00 AM
+[UPDATED]-Project PRJ-209 End Date Updated from 2016-09-30 to: 9/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-5 In-Service Date Updated from 2015-09-29 to: 9/29/2015 5:00:00 PM
+[UPDATED]-Project PRJ-5 CDR Date Updated from 2015-04-08 to: 4/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-5 PDR Date Updated from 2015-02-27 to: 2/27/2015 5:00:00 PM
+[UPDATED]-Project PRJ-5 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-5 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-6 In-Service Date Updated from 2015-09-29 to: 9/29/2015 5:00:00 PM
+[UPDATED]-Project PRJ-6 CDR Date Updated from 2015-03-13 to: 3/13/2015 5:00:00 PM
+[UPDATED]-Project PRJ-6 PDR Date Updated from 2015-02-24 to: 2/24/2015 5:00:00 PM
+[UPDATED]-Project PRJ-6 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-6 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-28 In-Service Date Updated from 2015-09-29 to: 9/29/2015 5:00:00 PM
+[UPDATED]-Project PRJ-28 CDR Date Updated from 2015-06-08 to: 6/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-28 PDR Date Updated from 2015-02-27 to: 2/27/2015 8:00:00 AM
+[UPDATED]-Project PRJ-28 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-28 End Date Updated from 2016-03-04 to: 3/4/2016 5:00:00 PM
+[UPDATED]-Project PRJ-24 In-Service Date Updated from 2015-12-15 to: 12/15/2015 5:00:00 PM
+[UPDATED]-Project PRJ-24 CDR Date Updated from 2015-05-14 to: 5/14/2015 5:00:00 PM
+[UPDATED]-Project PRJ-24 PDR Date Updated from 2015-01-13 to: 1/13/2015 5:00:00 PM
+[UPDATED]-Project PRJ-24 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-24 End Date Updated from 2016-01-29 to: 1/29/2016 12:00:00 AM
+[UPDATED]-Project PRJ-238 CDR Date Updated from 2015-02-23 to: 2/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-238 PDR Date Updated from 2015-01-13 to: 1/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-238 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-238 End Date Updated from 2015-07-31 to: 7/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-210 CDR Date Updated from 2015-06-19 to: 6/19/2015 8:00:00 AM
+[UPDATED]-Project PRJ-210 PDR Date Updated from 2015-06-19 to: 6/19/2015 5:00:00 PM
+[UPDATED]-Project PRJ-210 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-210 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-268 In-Service Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-268 CDR Date Updated from 2015-01-19 to: 1/19/2015 9:36:00 PM
+[UPDATED]-Project PRJ-268 PDR Date Updated from 2015-01-10 to: 1/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-268 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-268 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-81 In-Service Date Updated from 2015-06-30 to: 6/30/2015 8:00:00 AM
+[UPDATED]-Project PRJ-81 CDR Date Updated from 2014-08-25 to: 8/25/2014 5:00:00 PM
+[UPDATED]-Project PRJ-81 PDR Date Updated from 2014-05-02 to: 5/2/2014 5:00:00 PM
+[UPDATED]-Project PRJ-81 Start Date Updated from 2014-02-24 to: 2/24/2014 8:00:00 AM
+[UPDATED]-Project PRJ-81 End Date Updated from 2015-11-09 to: 11/9/2015 5:00:00 PM
+[UPDATED]-Project PRJ-82 CDR Date Updated from 2014-07-10 to: 7/10/2014 5:00:00 PM
+[UPDATED]-Project PRJ-82 PDR Date Updated from 2014-05-27 to: 5/27/2014 5:00:00 PM
+[UPDATED]-Project PRJ-82 Start Date Updated from 2013-08-12 to: 8/12/2013 8:00:00 AM
+[UPDATED]-Project PRJ-82 End Date Updated from 2016-05-26 to: 5/26/2016 5:00:00 PM
+[UPDATED]-Project PRJ-229 In-Service Date Updated from 2015-11-20 to: 11/20/2015 8:00:00 AM
+[UPDATED]-Project PRJ-229 CDR Date Updated from 2015-06-15 to: 6/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-229 PDR Date Updated from 2015-06-15 to: 6/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-229 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-229 End Date Updated from 2016-06-30 to: 6/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-236 In-Service Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-236 CDR Date Updated from 2015-01-19 to: 1/19/2015 9:36:00 PM
+[UPDATED]-Project PRJ-236 PDR Date Updated from 2015-01-10 to: 1/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-236 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-236 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-257 In-Service Date Updated from 2015-10-23 to: 10/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 CDR Date Updated from 2015-07-27 to: 7/27/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 PDR Date Updated from 2015-06-26 to: 6/26/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 Start Date Updated from 2015-05-04 to: 5/4/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 End Date Updated from 2016-01-15 to: 1/15/2016 11:12:00 AM
+[UPDATED]-Project PRJ-257 In-Service Date Updated from 2015-10-23 to: 10/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 CDR Date Updated from 2015-07-27 to: 7/27/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 PDR Date Updated from 2015-06-26 to: 6/26/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 Start Date Updated from 2015-05-04 to: 5/4/2015 8:00:00 AM
+[UPDATED]-Project PRJ-257 End Date Updated from 2016-01-15 to: 1/15/2016 11:12:00 AM
+[UPDATED]-Project PRJ-98 In-Service Date Updated from 2015-07-21 to: 7/21/2015 5:00:00 PM
+[UPDATED]-Project PRJ-98 CDR Date Updated from 2014-06-04 to: 6/4/2014 5:00:00 PM
+[UPDATED]-Project PRJ-98 PDR Date Updated from 2014-06-04 to: 6/4/2014 5:00:00 PM
+[UPDATED]-Project PRJ-98 Start Date Updated from 2014-03-25 to: 3/25/2014 8:00:00 AM
+[UPDATED]-Project PRJ-98 End Date Updated from 2015-08-21 to: 8/21/2015 5:00:00 PM
+[UPDATED]-Project PRJ-267 In-Service Date Updated from 2015-11-20 to: 11/20/2015 8:00:00 AM
+[UPDATED]-Project PRJ-267 CDR Date Updated from 2015-08-10 to: 8/10/2015 8:00:00 AM
+[UPDATED]-Project PRJ-267 PDR Date Updated from 2015-07-10 to: 7/10/2015 8:00:00 AM
+[UPDATED]-Project PRJ-267 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-267 End Date Updated from 2015-12-31 to: 12/31/2015 12:00:00 AM
+[UPDATED]-Project PRJ-265 In-Service Date Updated from 2015-10-01 to: 10/1/2015 5:00:00 PM
+[UPDATED]-Project PRJ-265 CDR Date Updated from 2015-06-19 to: 6/19/2015 8:00:00 AM
+[UPDATED]-Project PRJ-265 PDR Date Updated from 2015-06-05 to: 6/5/2015 8:00:00 AM
+[UPDATED]-Project PRJ-265 Start Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-265 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-248 CDR Date Updated from 2015-01-30 to: 1/30/2015 12:00:00 AM
+[UPDATED]-Project PRJ-248 PDR Date Updated from 2015-01-09 to: 1/9/2015 12:00:00 AM
+[UPDATED]-Project PRJ-248 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-248 End Date Updated from 2015-08-04 to: 8/4/2015 5:00:00 PM
+[UPDATED]-Project PRJ-84 CDR Date Updated from 2015-06-29 to: 6/29/2015 5:00:00 PM
+[UPDATED]-Project PRJ-84 PDR Date Updated from 2015-04-24 to: 4/24/2015 5:00:00 PM
+[UPDATED]-Project PRJ-84 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-84 End Date Updated from 2017-01-09 to: 1/9/2017 5:00:00 PM
+[UPDATED]-Project PRJ-10 In-Service Date Updated from 2015-10-14 to: 10/14/2015 5:00:00 PM
+[UPDATED]-Project PRJ-10 CDR Date Updated from 2015-02-06 to: 2/6/2015 5:00:00 PM
+[UPDATED]-Project PRJ-10 PDR Date Updated from 2014-12-18 to: 12/18/2014 8:00:00 AM
+[UPDATED]-Project PRJ-10 Start Date Updated from 2014-12-18 to: 12/18/2014 8:00:00 AM
+[UPDATED]-Project PRJ-10 End Date Updated from 2015-10-30 to: 10/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-109 In-Service Date Updated from 2015-09-06 to: 9/6/2015 5:00:00 PM
+[UPDATED]-Project PRJ-109 CDR Date Updated from 2015-02-23 to: 2/23/2015 8:00:00 AM
+[UPDATED]-Project PRJ-109 PDR Date Updated from 2013-12-03 to: 12/3/2013 8:00:00 AM
+[UPDATED]-Project PRJ-109 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-109 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-198 CDR Date Updated from 2015-04-28 to: 4/28/2015 8:00:00 AM
+[UPDATED]-Project PRJ-198 PDR Date Updated from 2015-04-28 to: 4/28/2015 8:00:00 AM
+[UPDATED]-Project PRJ-198 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-198 End Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-196 In-Service Date Updated from 2016-03-09 to: 3/9/2016 8:00:00 AM
+[UPDATED]-Project PRJ-196 CDR Date Updated from 2015-07-17 to: 7/17/2015 8:00:00 AM
+[UPDATED]-Project PRJ-196 PDR Date Updated from 2015-06-26 to: 6/26/2015 8:00:00 AM
+[UPDATED]-Project PRJ-196 Start Date Updated from 2015-04-01 to: 4/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-196 End Date Updated from 2016-03-09 to: 3/9/2016 8:00:00 AM
+[UPDATED]-Project PRJ-151 In-Service Date Updated from 2015-06-30 to: 6/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-151 CDR Date Updated from 2015-05-11 to: 5/11/2015 5:00:00 PM
+[UPDATED]-Project PRJ-151 PDR Date Updated from 2015-05-11 to: 5/11/2015 5:00:00 PM
+[UPDATED]-Project PRJ-151 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-151 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-22 In-Service Date Updated from 2016-04-22 to: 4/22/2016 8:00:00 AM
+[UPDATED]-Project PRJ-22 CDR Date Updated from 2015-08-28 to: 8/28/2015 8:00:00 AM
+[UPDATED]-Project PRJ-22 PDR Date Updated from 2015-07-31 to: 7/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-22 Start Date Updated from 2015-05-01 to: 5/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-22 End Date Updated from 2016-06-30 to: 6/30/2016 12:00:00 AM
+[UPDATED]-Project PRJ-242 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-242 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-242 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-242 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-242 End Date Updated from 2016-03-02 to: 3/2/2016 5:00:00 PM
+[UPDATED]-Project PRJ-106 CDR Date Updated from 2014-10-23 to: 10/23/2014 5:00:00 PM
+[UPDATED]-Project PRJ-106 PDR Date Updated from 2014-09-09 to: 9/9/2014 5:00:00 PM
+[UPDATED]-Project PRJ-106 Start Date Updated from 2014-04-16 to: 4/16/2014 8:00:00 AM
+[UPDATED]-Project PRJ-106 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-7 In-Service Date Updated from 2015-07-10 to: 7/10/2015 5:00:00 PM
+[UPDATED]-Project PRJ-7 CDR Date Updated from 2015-03-04 to: 3/4/2015 5:00:00 PM
+[UPDATED]-Project PRJ-7 PDR Date Updated from 2015-01-09 to: 1/9/2015 8:00:00 AM
+[UPDATED]-Project PRJ-7 Start Date Updated from 2014-12-18 to: 12/18/2014 8:00:00 AM
+[UPDATED]-Project PRJ-7 End Date Updated from 2016-04-11 to: 4/11/2016 4:36:00 PM
+[UPDATED]-Project PRJ-240 In-Service Date Updated from 2015-12-01 to: 12/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-240 CDR Date Updated from 2015-01-19 to: 1/19/2015 9:36:00 PM
+[UPDATED]-Project PRJ-240 PDR Date Updated from 2015-01-10 to: 1/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-240 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-240 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-195 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-195 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-195 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-195 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-195 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-149 In-Service Date Updated from 2016-07-05 to: 7/5/2016 8:00:00 AM
+[UPDATED]-Project PRJ-149 CDR Date Updated from 2015-07-01 to: 7/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-149 PDR Date Updated from 2015-05-13 to: 5/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-149 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-149 End Date Updated from 2016-07-05 to: 7/5/2016 8:00:00 AM
+[UPDATED]-Project PRJ-87 In-Service Date Updated from 2015-07-24 to: 7/24/2015 5:00:00 PM
+[UPDATED]-Project PRJ-87 CDR Date Updated from 2014-08-08 to: 8/8/2014 5:00:00 PM
+[UPDATED]-Project PRJ-87 PDR Date Updated from 2014-06-04 to: 6/4/2014 5:00:00 PM
+[UPDATED]-Project PRJ-87 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-87 End Date Updated from 2015-12-07 to: 12/7/2015 8:01:00 AM
+[UPDATED]-Project PRJ-88 In-Service Date Updated from 2015-06-16 to: 6/16/2015 5:00:00 PM
+[UPDATED]-Project PRJ-88 CDR Date Updated from 2014-06-03 to: 6/3/2014 8:00:00 AM
+[UPDATED]-Project PRJ-88 PDR Date Updated from 2014-01-13 to: 1/13/2014 8:00:00 AM
+[UPDATED]-Project PRJ-88 Start Date Updated from 2014-01-01 to: 1/1/2014 8:00:00 AM
+[UPDATED]-Project PRJ-88 End Date Updated from 2016-09-01 to: 9/1/2016 5:00:00 PM
+[UPDATED]-Project PRJ-96 CDR Date Updated from 2015-06-12 to: 6/12/2015 8:00:00 AM
+[UPDATED]-Project PRJ-96 PDR Date Updated from 2015-01-08 to: 1/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-96 Start Date Updated from 2015-02-13 to: 2/13/2015 8:00:00 AM
+[UPDATED]-Project PRJ-96 End Date Updated from 2016-05-27 to: 5/27/2016 5:00:00 PM
+[UPDATED]-Project PRJ-176 In-Service Date Updated from 2015-12-17 to: 12/17/2015 8:00:00 AM
+[UPDATED]-Project PRJ-176 CDR Date Updated from 2015-07-15 to: 7/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-176 PDR Date Updated from 2015-06-17 to: 6/17/2015 8:00:00 AM
+[UPDATED]-Project PRJ-176 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-176 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-145 CDR Date Updated from 2014-07-17 to: 7/17/2014 5:00:00 PM
+[UPDATED]-Project PRJ-145 PDR Date Updated from 2014-06-10 to: 6/10/2014 5:00:00 PM
+[UPDATED]-Project PRJ-145 Start Date Updated from 2014-03-03 to: 3/3/2014 8:00:00 AM
+[UPDATED]-Project PRJ-145 End Date Updated from 2016-01-04 to: 1/4/2016 1:13:30 PM
+[UPDATED]-Project PRJ-130 CDR Date Updated from 2015-02-03 to: 2/3/2015 5:00:00 PM
+[UPDATED]-Project PRJ-130 PDR Date Updated from 2014-09-30 to: 9/30/2014 5:00:00 PM
+[UPDATED]-Project PRJ-130 Start Date Updated from 2014-09-18 to: 9/18/2014 8:00:00 AM
+[UPDATED]-Project PRJ-130 End Date Updated from 2015-06-22 to: 6/22/2015 5:00:00 PM
+[UPDATED]-Project PRJ-144 In-Service Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-144 CDR Date Updated from 2015-08-14 to: 8/14/2015 5:00:00 PM
+[UPDATED]-Project PRJ-144 PDR Date Updated from 2015-07-20 to: 7/20/2015 8:00:00 AM
+[UPDATED]-Project PRJ-144 Start Date Updated from 2015-01-22 to: 1/22/2015 8:00:00 AM
+[UPDATED]-Project PRJ-144 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-235 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-235 CDR Date Updated from 2015-02-07 to: 2/7/2015 2:24:00 AM
+[UPDATED]-Project PRJ-235 PDR Date Updated from 2015-01-20 to: 1/20/2015 1:12:00 AM
+[UPDATED]-Project PRJ-235 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-235 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-12 CDR Date Updated from 2015-03-11 to: 3/11/2015 8:00:00 AM
+[UPDATED]-Project PRJ-12 PDR Date Updated from 2015-03-11 to: 3/11/2015 8:00:00 AM
+[UPDATED]-Project PRJ-12 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-12 End Date Updated from 2016-11-04 to: 11/4/2016 11:00:00 AM
+[UPDATED]-Project PRJ-49 In-Service Date Updated from 2015-05-08 to: 5/8/2015 5:00:00 PM
+[UPDATED]-Project PRJ-49 CDR Date Updated from 2014-01-17 to: 1/17/2014 5:00:00 PM
+[UPDATED]-Project PRJ-49 PDR Date Updated from 2013-12-10 to: 12/10/2013 5:00:00 PM
+[UPDATED]-Project PRJ-49 Start Date Updated from 2013-07-31 to: 7/31/2013 8:00:00 AM
+[UPDATED]-Project PRJ-49 End Date Updated from 2015-06-10 to: 6/10/2015 5:00:00 PM
+[UPDATED]-Project PRJ-177 In-Service Date Updated from 2015-12-12 to: 12/12/2015 8:24:00 PM
+[UPDATED]-Project PRJ-177 CDR Date Updated from 2015-08-04 to: 8/4/2015 5:00:00 PM
+[UPDATED]-Project PRJ-177 PDR Date Updated from 2015-07-08 to: 7/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-177 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-177 End Date Updated from 2016-03-31 to: 3/31/2016 5:00:00 PM
+[UPDATED]-Project PRJ-207 CDR Date Updated from 2015-12-24 to: 12/24/2015 8:00:00 AM
+[UPDATED]-Project PRJ-207 PDR Date Updated from 2014-11-05 to: 11/5/2014 8:00:00 AM
+[UPDATED]-Project PRJ-207 Start Date Updated from 2014-09-19 to: 9/19/2014 8:00:00 AM
+[UPDATED]-Project PRJ-207 End Date Updated from 2015-12-24 to: 12/24/2015 8:00:00 AM
+[UPDATED]-Project PRJ-178 In-Service Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-178 CDR Date Updated from 2015-02-25 to: 2/25/2015 12:00:00 PM
+[UPDATED]-Project PRJ-178 PDR Date Updated from 2015-01-29 to: 1/29/2015 6:00:00 AM
+[UPDATED]-Project PRJ-178 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-178 End Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-153 In-Service Date Updated from 2016-06-02 to: 6/2/2016 6:00:00 PM
+[UPDATED]-Project PRJ-153 CDR Date Updated from 2015-08-11 to: 8/11/2015 5:00:00 PM
+[UPDATED]-Project PRJ-153 PDR Date Updated from 2015-06-30 to: 6/30/2015 5:00:00 PM
+[UPDATED]-Project PRJ-153 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-153 End Date Updated from 2016-12-30 to: 12/30/2016 5:00:00 PM
+[UPDATED]-Project PRJ-174 CDR Date Updated from 2015-06-17 to: 6/17/2015 8:00:00 AM
+[UPDATED]-Project PRJ-174 PDR Date Updated from 2015-05-08 to: 5/8/2015 8:00:00 AM
+[UPDATED]-Project PRJ-174 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-174 End Date Updated from 2016-11-06 to: 11/6/2016 2:24:00 PM
+[UPDATED]-Project PRJ-152 In-Service Date Updated from 2016-11-21 to: 11/21/2016 4:48:00 PM
+[UPDATED]-Project PRJ-152 CDR Date Updated from 2015-03-15 to: 3/15/2015 2:24:00 PM
+[UPDATED]-Project PRJ-152 PDR Date Updated from 2015-02-07 to: 2/7/2015 7:12:00 AM
+[UPDATED]-Project PRJ-152 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-152 End Date Updated from 2016-11-21 to: 11/21/2016 4:48:00 PM
+[UPDATED]-Project PRJ-147 In-Service Date Updated from 2015-12-31 to: 12/31/2015 8:00:00 AM
+[UPDATED]-Project PRJ-147 CDR Date Updated from 2015-06-15 to: 6/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-147 PDR Date Updated from 2015-05-15 to: 5/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-147 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-147 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-139 In-Service Date Updated from 2015-06-23 to: 6/23/2015 5:00:00 PM
+[UPDATED]-Project PRJ-139 CDR Date Updated from 2015-05-22 to: 5/22/2015 5:00:00 PM
+[UPDATED]-Project PRJ-139 PDR Date Updated from 2015-05-22 to: 5/22/2015 5:00:00 PM
+[UPDATED]-Project PRJ-139 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-139 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-256 In-Service Date Updated from 2015-01-29 to: 1/29/2015 5:00:00 PM
+[UPDATED]-Project PRJ-256 CDR Date Updated from 2014-06-18 to: 6/18/2014 5:00:00 PM
+[UPDATED]-Project PRJ-256 PDR Date Updated from 2014-06-03 to: 6/3/2014 5:00:00 PM
+[UPDATED]-Project PRJ-256 Start Date Updated from 2014-03-31 to: 3/31/2014 8:00:00 AM
+[UPDATED]-Project PRJ-256 End Date Updated from 2016-03-08 to: 3/8/2016 5:00:00 PM
+[UPDATED]-Project PRJ-245 In-Service Date Updated from 2015-12-10 to: 12/10/2015 10:48:00 PM
+[UPDATED]-Project PRJ-245 CDR Date Updated from 2015-04-15 to: 4/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-245 PDR Date Updated from 2015-04-01 to: 4/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-245 Start Date Updated from 2015-01-02 to: 1/2/2015 8:00:00 AM
+[UPDATED]-Project PRJ-245 End Date Updated from 2015-12-31 to: 12/31/2015 5:00:00 PM
+[UPDATED]-Project PRJ-206 In-Service Date Updated from 2015-03-10 to: 3/10/2015 8:00:00 AM
+[UPDATED]-Project PRJ-206 CDR Date Updated from 2013-06-26 to: 6/26/2013 8:00:00 AM
+[UPDATED]-Project PRJ-206 PDR Date Updated from 2013-04-19 to: 4/19/2013 8:00:00 AM
+[UPDATED]-Project PRJ-206 Start Date Updated from 2013-01-01 to: 1/1/2013 8:00:00 AM
+[UPDATED]-Project PRJ-206 End Date Updated from 2015-05-27 to: 5/27/2015 5:00:00 PM
+[UPDATED]-Project PRJ-35 In-Service Date Updated from 2015-06-30 to: 6/30/2015 8:00:00 AM
+[UPDATED]-Project PRJ-35 CDR Date Updated from 2015-04-15 to: 4/15/2015 8:00:00 AM
+[UPDATED]-Project PRJ-35 PDR Date Updated from 2015-01-06 to: 1/6/2015 8:00:00 AM
+[UPDATED]-Project PRJ-35 Start Date Updated from 2015-01-01 to: 1/1/2015 8:00:00 AM
+[UPDATED]-Project PRJ-35 End Date Updated from 2015-07-31 to: 7/31/2015 5:00:00 PM
+[UPDATE ENDED]-END TIME: Fri Jun 19 14:16:26 PDT 2015 

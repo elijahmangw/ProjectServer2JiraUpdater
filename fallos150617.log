@@ -1,0 +1,65 @@
+[UPDATE STARTED]-START TIME: Fri Jun 19 14:12:05 PDT 2015 
+[ERROR]-WBS FIELD EMPTY= 4K TV HDR Technology
+ 2 Projects with WBS as : A430 
+[DUPLICATED]-Duplicate Entry for Project: A430 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A443: A443 Mobile Optimizations Streaming Enhancement 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A872: AIM 1_5 NRE Proposal 
+[ERROR]-WBS FIELD EMPTY= AIM Firmware Updates for DSWM Gen 2
+[ERROR]-WBS FIELD EMPTY= AIM v2
+[ERROR]-WBS FIELD EMPTY= ATSC CC Broadcast Compliance
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T915: Auto-Auth for ATT Wireless Customers 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T916: Auto-Auth In-Home with BB Gateway 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T922: Banner Ad Support Within App 
+ 2 Projects with WBS as : A835 
+[DUPLICATED]-Duplicate Entry for Project: A835 
+[ERROR]-WBS FIELD EMPTY= Cache Improvements
+[ERROR]-WBS FIELD EMPTY= Cloud based on-demand content transcoding
+[ERROR]-WBS FIELD EMPTY= Cloud Deployment
+[ERROR]-WBS FIELD EMPTY= Commercial iPad App
+[ERROR]-WBS FIELD EMPTY= Communications Analysis and Link Budget Tools
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A523: comScore Reporting 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A908: CRBC Pickup Truck Replace 
+ 2 Projects with WBS as : A816 
+[DUPLICATED]-Duplicate Entry for Project: A816 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A898: DSWM22 Module for MDU-Commercial 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T903: Enhancements to Support Hulu Plus Carousels 
+[ERROR]-PROJECT IS CLOSED=T955-PRJ-253
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A717: FCC Closed Captioned Quality 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T914: Filters (Turn On_Off Premium OTT Content) 
+[ERROR]-PROJECT IS CLOSED=A4722-PRJ-107
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T910: Guest Mode Support 
+[ERROR]-PROJECT IS CLOSED=A698-PRJ-42
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=0: HTML5 Roadmap Phase 2 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A289: Increase Live TV 150 Channels 
+[ERROR]-PROJECT IS CLOSED=A300-PRJ-55
+ 2 Projects with WBS as : A846 
+[DUPLICATED]-Duplicate Entry for Project: A846 
+[ERROR]-WBS FIELD EMPTY= LA-Bakersfield Broadcast Infrastructure
+[ERROR]-WBS FIELD EMPTY= LABC - iTX Content Management
+[ERROR]-WBS FIELD EMPTY= Learning Development Optimization
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A4721: Mobile Enhancements NonUbiquitous 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A913: MWUF High Bay Sprinkler Pipe replacement 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A909: NASO Ineoquest Probes - SLIL UTPS 
+[ERROR]-WBS FIELD EMPTY= NASO Security Tools
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A523: Nielsen Reporting 
+ 3 Projects with WBS as : A855 
+[DUPLICATED]-Duplicate Entry for Project: A855 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T913: Premium OTT - Hulu - Browse-Search-Etc 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T929: Premium OTT - Netflix - Amazon Prime 
+[ERROR]-WBS FIELD EMPTY= Production VMware and SAN Storage to Support Production SCCM
+ 2 Projects with WBS as : T939 
+[DUPLICATED]-Duplicate Entry for Project: T939 
+[ERROR]-WBS FIELD EMPTY= Recommendations to Non-Authenticated Users
+[ERROR]-WBS FIELD EMPTY= Rollover Left Menus on STB
+[ERROR]-PROJECT IS CLOSED=A441-PRJ-200
+[ERROR]-WBS FIELD EMPTY= Self-Install DIRECTV Product for Low-SAC Solution
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T912: Social Trending 
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=A890: Spectralink IP to DECT RUF(DUF) Phone System Upgrades 
+ 2 Projects with WBS as : A837 
+[DUPLICATED]-Duplicate Entry for Project: A837 
+[ERROR]-WBS FIELD EMPTY= TMS description improvements on STB
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T966: Transcoding Error Code Elucidation 
+[ERROR]-WBS FIELD EMPTY= Two Step Authentication and Secure Delivery of Keys
+[ERROR]-PROJECT NOT FOUND IN JIRA with WBS=T920: Upsell Promotional Image Link Management 
+[UPDATE ENDED]-END TIME: Fri Jun 19 14:16:26 PDT 2015 
+[UPDATE STARTED]-START TIME: Fri Jun 19 14:17:05 PDT 2015 
