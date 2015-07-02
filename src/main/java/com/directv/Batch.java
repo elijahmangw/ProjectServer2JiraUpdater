@@ -178,6 +178,7 @@ public class Batch {
 			    bufferExitos.append("*******JIRA-PROJECT SERVER SYNCRONIZER*******");
 			    bufferExitos.append("\n\r"); 
 			    bufferExitos.append("[UPDATE STARTED]-START TIME: " + new Date() + " ");
+			    bufferFallos.append("*******JIRA-PROJECT SERVER SYNCRONIZER*******");
 			    bufferFallos.append("[UPDATE STARTED]-START TIME: " + new Date() + " ");
 			    bufferExitos.append("\n\r");
 			    bufferFallos.append("\n\r");
@@ -194,13 +195,21 @@ public class Batch {
 
 			    for(Project item : items){
 					System.out.println("WBS=" + item.getWbs());
+					System.out.println("PRJ=" + item.getPrj());
+					//--[bbuelga:6/29/15: adding PRJ authentication --
+					/*if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
+						Issue.SearchResult sr = jira.searchIssues("id= " + item.getPrj());
+						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getPrj() + item.getWbs());
+					}*/
 					if ((item.getWbs() != null) && !(item.getWbs().isEmpty())){
+						//--if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
 						//String wbsx = new String();
 	        			//wbsx = item.getWbs().substring(0, item.getWbs().indexOf(","));
 					    //System.out.println(" (-1) :: " + wbsx);
 						//Issue.SearchResult sr = jira.searchIssues("wbs ~ " + wbsx);
 						Issue.SearchResult sr = jira.searchIssues("wbs ~ " + item.getWbs());
-					    System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getWbs());
+						//--Issue.SearchResult sr = jira.searchIssues("key = " + item.getWbs());
+						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getWbs());
 						  if (sr.issues.size() > 1){ 
 							  System.out.println(" (1) :: Duplicate Entry for Project: " + item.getWbs());
 							  //bufferFallos.append(" " + sr.total + " Projects with WBS as : " + item.getWbs() + " ");
@@ -260,12 +269,13 @@ public class Batch {
 					        		  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " Project Manager Updated from " + issue.getField(projectmgr).toString() + " to: " + item.getProjectManager());
 						        	  bufferExitos.append("\n\r");
 					        	  }
+					        	  /* temporary deactivated until technical lead field is a person field
 					        	  if (!(item.getTechnicalLead().toString().trim().equals(issue.getField(techlead).toString().trim()))){
 					        		  issue.update().field(techlead, item.getTechnicalLead()).execute();   	//project manager update
 						        	  System.out.println(" (6) :: Project " + issue.getKey() + " Technical Lead Updated from " + issue.getField(techlead).toString() + "  to: " + item.getTechnicalLead());
 					        		  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " Technical Lead Updated from " + issue.getField(techlead).toString() + "  to: " + item.getTechnicalLead());
 						        	  bufferExitos.append("\n\r");
-					        	  }
+					        	  }*/
 					        	  if (!(urlsite.trim().equals(issue.getField(projecturl).toString().trim()))){
 					        		  issue.update().field(projecturl, urlsite).execute();   	//project manager update
 						        	  System.out.println(" (7) :: Project " + issue.getKey() + " Project URL Updated from " + issue.getField(projecturl).toString() + "  to: " + urlsite);
@@ -279,25 +289,50 @@ public class Batch {
 					        	  	.field(projecturl, urlsite).execute();
 					        	  */
 					        	  //.field(Field.DESCRIPTION, item.getDescription()).execute();
-					        	  
-					        	  					        	  
-					        	  if ((item.getInServiceDate() != null) && (!item.getInServiceDate().isEmpty())){
-					        		  System.out.println(" (88) :: date1 " + item.getInServiceDate());  
-					        		  Date inServiceDated1 = dateformat.parse(item.getInServiceDate());
-					        		  System.out.println(" (88) :: date1 " + inServiceDated1);  
-					        		  System.out.println(" (88) :: date2 " + issue.getField(inservicedate).toString());  
-					        	  	  Date inServiceDated2 = dtformatter.parse(issue.getField(inservicedate).toString());
-					        	  	  System.out.println(" (88) ::: date2 " + inServiceDated2);
-					        		  if (!(inServiceDated1.equals(inServiceDated2))){
-					        			  issue.update().field(inservicedate, inServiceDated1).execute();
-							        	  System.out.println(" (8) :: Project " + issue.getKey() + " In-Service Date Updated from " + inServiceDated2 + " to: " + inServiceDated1);
-					        			  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " In-Service Date Updated from " + inServiceDated2 + " to: " + inServiceDated1);
-							        	  bufferExitos.append("\n\r");
-					        		  }
-					        	  else{ 
-						        	  bufferFallos.append("[WARNING]-PROJECT INSERVICEDATE IS NULL=" + item.getWbs());
-					        	  	  bufferFallos.append("\n\r");
+					        	  String keyreldt = item.getKeyRelease();
+					        	  Date keyreldtt = null;
+					        	  Date inServiceDated1 = null;
+					        	  Date inServiceDated2 = null;
+					        	  String inserdt = item.getInServiceDate();
+					        	  Date finalInService = null;
+					        	  if ((keyreldt != null) && (!keyreldt.isEmpty())){
+						        	   keyreldtt =  dateformat.parse(keyreldt);
+						        	   System.out.println(" (88) :: date1 key " + keyreldtt);
 					        	  }
+					        	  else {
+					        		  finalInService = dateformat.parse(inserdt);
+					        	  }
+					        	  if ((inserdt != null) && (!inserdt.isEmpty())){
+					        		  System.out.println(" (88) :: date1 " + inserdt);  
+					        		  inServiceDated1 = dateformat.parse(inserdt);
+					        		  System.out.println(" (88) :: date1 inser" + inServiceDated1);
+					        	  }
+					        	  else{
+					        		  finalInService = dateformat.parse(keyreldt);
+					        	  }
+					        	  if ((finalInService == null)){
+					        		switch (keyreldtt.compareTo(inServiceDated1)) {
+						        	    case -1:  finalInService = inServiceDated1;  break;
+						        	    case 0:   finalInService = keyreldtt;  break;
+						        	    case 1:   finalInService = keyreldtt;  break;
+						        	    default:  System.out.println("Invalid results from date comparison"); break;
+					        		}
+					        	  }
+				        		  System.out.println(" (DATE) :: INSERVICE FINAL " + finalInService);  
+
+				        		  inServiceDated2 = dtformatter.parse(issue.getField(inservicedate).toString());
+				        	  	  System.out.println(" (88) ::: date2 " + inServiceDated2);
+				        		  if (!(finalInService.equals(inServiceDated2)))
+				        		  {
+				        			  issue.update().field(inservicedate, finalInService).execute();
+						        	  System.out.println(" (8) :: Project " + issue.getKey() + " In-Service Date Updated from " + inServiceDated2 + " to: " + finalInService);
+				        			  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " In-Service Date Updated from " + inServiceDated2 + " to: " + finalInService);
+						        	  bufferExitos.append("\n\r");
+				        		  }
+					          	  else
+					        	  { 
+					        		 bufferFallos.append("[WARNING]-PROJECT INSERVICEDATE IS NULL=" + item.getWbs());
+					        	  	 bufferFallos.append("\n\r");
 					        	  }
 					        	  if ((item.getCdrDate() != null) && (!item.getCdrDate().isEmpty())){
 					        		  System.out.println(" (88) :: date1 " + item.getCdrDate());  
@@ -312,10 +347,12 @@ public class Batch {
 					        			  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " CDR Date Updated from " + cdrDt2 + " to: " + cdrDt1);
 							        	  bufferExitos.append("\n\r");
 					        		  }
-					        	  else{ 
-					        		  bufferFallos.append("[WARNING]-PROJECT CDR DATE IS NULL=" + item.getWbs());
+					        	  
+					          	  }else{ 
+					          		 System.out.println(" (888) :: Project " + issue.getKey() + " In-Service Date Updated from " );
+					          		 bufferFallos.append("[WARNING]-PROJECT CDR DATE IS NULL=" + item.getWbs());
 					        	  	  bufferFallos.append("\n\r");
-					          	  }}
+					        	  }
 					        	  if ((item.getPdrDate() != null) && (!item.getPdrDate().isEmpty())){
 					        		  System.out.println(" (88) :: date1 " + item.getPdrDate());  
 					        		  Date pdrDt1 = dateformat.parse(item.getPdrDate());
@@ -329,10 +366,11 @@ public class Batch {
 					        			  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " PDR Date Updated from " + pdrDt2 + " to: " + pdrDt1);
 							        	  bufferExitos.append("\n\r");
 					        		  }
-					        	  else{
+					        	  
+					        	  }else{
 					        		  bufferFallos.append("[WARNING]-PROJECT PDR DATE IS NULL=" + item.getWbs());
 					        		  bufferFallos.append("\n\r");
-					        	  }}
+					        	  }
 					        	  if ((item.getProjectStartDate() != null) && (!item.getProjectStartDate().isEmpty())){
 					        		  System.out.println(" (88) :: date1 " + item.getProjectStartDate());  
 					        		  Date pjstart1 = dateformat.parse(item.getProjectStartDate());
@@ -346,10 +384,11 @@ public class Batch {
 					        			  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " Start Date Updated from " + pjstart2 + " to: " + pjstart1);
 							        	  bufferExitos.append("\n\r");
 					        		  }
-					        	  else{
+					        	  
+					        	  }else{
 					        		  bufferFallos.append("[WARNING]-PROJECT START DATE IS NULL=" + item.getWbs());
 					        		  bufferFallos.append("\n\r");
-					        	  }}
+					        	  }
 					        	  if ((item.getProjectFinishDate() != null) && (!item.getProjectFinishDate().isEmpty())){
 					        		  System.out.println(" (88) :: date1 " + item.getProjectFinishDate());  
 					        		  Date pjend1 = dateformat.parse(item.getProjectFinishDate());
@@ -363,27 +402,28 @@ public class Batch {
 					        			  	bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " End Date Updated from " + pjend2 + " to: " + pjend1);
 								        	bufferExitos.append("\n\r");
 					        		  }
-					        	  else{ 
+					        	  
+					        	  }else{ 
 					        		  bufferFallos.append("[WARNING]-PROJECT END DATE IS NULL=" + item.getWbs());
 					        		  bufferFallos.append("\n\r");
-					        	  }}	
+					        	  }	
 					        	  
 					        	  //[buelga: 6/17/15]: added new fields in the csv to be treated as accoundIDs and PRJ
 					        	  /* TODO: Include when we have Jira with person pickers fields---
-					        	   * if ((item.getProjectMgrAccount() != null) && (!item.getProjectMgrAccount().isEmpty()))		        	   
+					        	    if ((item.getProjectMgrAccount() != null) && (!item.getProjectMgrAccount().isEmpty()))		        	   
 					        		  if (!(item.getProjectMgrAccount().equals(issue.getField(projmgracc)))){
-					        			  	String pjmg = new String("d" + item.getProjectMgrAccount().substring(3));
+					        			  	Striissue.getKey() + " End Date Updated from " + issue.getField(projmgracc).toString() + " to: " + pjmg);
+								        	bufferExitos.append("\n\r");ng tmp1 = item.getProjectMgrAccount().substring(item.getProjectMgrAccount().indexOf("\\"));
+					        			  	String pjmg = new String("d" + tmp1);
 							  				System.out.println("[USER]-" + pjmg);
-											issue.update().field(projmgracc, parse(item.getProjectFinishDate())).execute();
-								        	System.out.println(" (12) :: Project " + issue.getKey() + " End Date Updated from " + issue.getField(projmgracc).toString() + " to: " + item.getProjectMgrAccount());
-					        			  	bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " End Date Updated from " + issue.getField(projmgracc).toString() + " to: " + item.getProjectMgrAccount());
-								        	bufferExitos.append("\n\r");
+											issue.update().field(projmgracc, pjmg).execute();
+								        	System.out.println(" (12) :: Project " + issue.getKey() + " End Date Updated from " + issue.getField(projmgracc).toString() + " to: " + pjmg);
+					        			  	bufferExitos.append("[UPDATED]-Project " + 
 					        		  }
 					        	  else{ 
 					        		  bufferFallos.append("[WARNING]-PROJECT END DATE IS NULL=" + item.getWbs());
 					        		  bufferFallos.append("\n\r");
-					        	  }*/
-					          }
+					        	  }*/					          }
 					          else{
 					        	  bufferFallos.append("[ERROR]-PROJECT IS CLOSED=" + item.getWbs() + "-" + issue.getKey());
 					        	  bufferFallos.append("\n\r");
