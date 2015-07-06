@@ -29,7 +29,7 @@ public class Scheduler {
     //Running Tuesdays and Fridays @3pm
     //@Scheduled(cron = "0 15 12 ? * MON-FRI") // will run mon to fridat at 12:15am
     //@Scheduled(cron = "0 0/10 * * * ?") //running every 10 mins, just for testing purposes
-    @Scheduled(cron = "0 0/15 * * * ?") //running every 10 mins, just for testing purposes
+    @Scheduled(cron = "0/10 * * * * ?") //running every 10 mins, just for testing purposes
     public void reportCurrentTime() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
 		jobLauncher.run(job, new JobParameters());
     }

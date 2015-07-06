@@ -66,8 +66,10 @@ public class Batch {
 	@Value("${com.directv.url}")
 	String url;	
 
-	//@Value("${com.directv.progmgracc}")
+	//Not used -- @Value("${com.directv.progmgracc}")
 	//String progmgracc;
+	@Value("${com.directv.techleadacc}")
+	String techleadacc;
 	@Value("${com.directv.projmgracc}")
 	String projmgracc;
 	@Value("${com.directv.prj}")
@@ -120,7 +122,7 @@ public class Batch {
             	setNames(new String[] {"wbs", "summary", "description",
             			"technicalLead", "programManager","projectManager",
             			"projectStartDate", "projectFinishDate","pdrDate","cdrDate", "inServiceDate", "keyRelease",
-            			"priority","siteUrl", "programMgrAccount", "projectMgrAccount", "prj"
+            			"priority","siteUrl", "programMgrAccount", "projectMgrAccount", "prj", "techLeadAccount"
             			});
             }});
             setFieldSetMapper(new BeanWrapperFieldSetMapper<Project>() {{
@@ -148,9 +150,12 @@ public class Batch {
     	    		project.setDescription(project.getDescription() + "\n\r" + URIUtil.encodeQuery(project.getSiteUrl()));
     	    	//Quering Active Directory for username/userid
     	    	//Needed to know the domain
-    	    	//username = do the LDAP query here from project.getprojectmanager()  and techlead
+    	    	//TODO: username = do the LDAP query here from project.getprojectmanager()  and techlead
     	    	project.setProjectManager(project.getProjectManager());
     	    	project.setTechnicalLead(project.getTechnicalLead());
+    	    	//TODO: Recommending to do in the processor (here) transformations to the fields
+    	    	// as data fields, projmgr and techlead fields, etc. See code below to add the 
+    	    	// transformations here for encapsulation and inheritance
     	    	return project;
     	    }
     	};
@@ -194,27 +199,28 @@ public class Batch {
 	            */
 
 			    for(Project item : items){
-					System.out.println("WBS=" + item.getWbs());
-					System.out.println("PRJ=" + item.getPrj());
+					String wbss = item.getWbs();
+					String prjj = item.getPrj();
+			    	System.out.println("WBS=" + wbss);
+					System.out.println("PRJ=" + prjj);
 					//--[bbuelga:6/29/15: adding PRJ authentication --
 					/*if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
-						Issue.SearchResult sr = jira.searchIssues("id= " + item.getPrj());
+						Issue.SearchResult sr = jira.searchIssues("id= " + prjj);
 						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getPrj() + item.getWbs());
 					}*/
-					if ((item.getWbs() != null) && !(item.getWbs().isEmpty())){
+					if ((wbss != null) && !(wbss.isEmpty())){
 						//--if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
-						//String wbsx = new String();
-	        			//wbsx = item.getWbs().substring(0, item.getWbs().indexOf(","));
-					    //System.out.println(" (-1) :: " + wbsx);
-						//Issue.SearchResult sr = jira.searchIssues("wbs ~ " + wbsx);
-						Issue.SearchResult sr = jira.searchIssues("wbs ~ " + item.getWbs());
-						//--Issue.SearchResult sr = jira.searchIssues("key = " + item.getWbs());
-						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getWbs());
+	        			if ((wbss.indexOf(",")!=-1)) 
+	        					wbss = wbss.substring(0, wbss.indexOf(",")).trim();
+					    else wbss.trim();
+	        			System.out.println(" (-1) :: " + wbss);
+						Issue.SearchResult sr = jira.searchIssues("wbs ~ " + wbss);
+						//--Issue.SearchResult sr = jira.searchIssues("id = " + prjj);
+						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + wbss);
 						  if (sr.issues.size() > 1){ 
-							  System.out.println(" (1) :: Duplicate Entry for Project: " + item.getWbs());
-							  //bufferFallos.append(" " + sr.total + " Projects with WBS as : " + item.getWbs() + " ");
+							  System.out.println(" (1) :: Duplicate Entry for Project: " + wbss);
 							  bufferFallos.append("\n\r");
-							  bufferFallos.append("[DUPLICATED]-Duplicate Entry for Project: " + item.getWbs() + " ");
+							  bufferFallos.append("[DUPLICATED]-Duplicate Entry for Project: " + wbss + " ");
 							  bufferFallos.append("\n\r");
 						  }
 						  else if (sr.issues.size() == 0){ 
@@ -269,7 +275,7 @@ public class Batch {
 					        		  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " Project Manager Updated from " + issue.getField(projectmgr).toString() + " to: " + item.getProjectManager());
 						        	  bufferExitos.append("\n\r");
 					        	  }
-					        	  /* temporary deactivated until technical lead field is a person field
+					        	  /*TODO: temporary deactivated until technical lead field is a person field
 					        	  if (!(item.getTechnicalLead().toString().trim().equals(issue.getField(techlead).toString().trim()))){
 					        		  issue.update().field(techlead, item.getTechnicalLead()).execute();   	//project manager update
 						        	  System.out.println(" (6) :: Project " + issue.getKey() + " Technical Lead Updated from " + issue.getField(techlead).toString() + "  to: " + item.getTechnicalLead());
@@ -295,6 +301,15 @@ public class Batch {
 					        	  Date inServiceDated2 = null;
 					        	  String inserdt = item.getInServiceDate();
 					        	  Date finalInService = null;
+					        	  //if both dates in source are null, then report and do nothing - needs to be fixed in source
+					        	 if ((keyreldt == null || keyreldt.isEmpty()) && (inserdt == null || inserdt.isEmpty()))
+					        	 {
+					        		 System.out.println("[ERROR]-BOTH KEYRELEASE and CLIENT_HE DATES ARE NULL=" + item.getWbs());
+					        		 bufferFallos.append("[ERROR]-BOTH KEYRELEASE and CLIENT_HE DATES ARE NULL=" + item.getWbs());
+						        	 bufferFallos.append("\n\r");
+					        	 }
+					        	 else
+					        	 { 
 					        	  if ((keyreldt != null) && (!keyreldt.isEmpty())){
 						        	   keyreldtt =  dateformat.parse(keyreldt);
 						        	   System.out.println(" (88) :: date1 key " + keyreldtt);
@@ -319,7 +334,6 @@ public class Batch {
 					        		}
 					        	  }
 				        		  System.out.println(" (DATE) :: INSERVICE FINAL " + finalInService);  
-
 				        		  inServiceDated2 = dtformatter.parse(issue.getField(inservicedate).toString());
 				        	  	  System.out.println(" (88) ::: date2 " + inServiceDated2);
 				        		  if (!(finalInService.equals(inServiceDated2)))
@@ -334,6 +348,9 @@ public class Batch {
 					        		 bufferFallos.append("[WARNING]-PROJECT INSERVICEDATE IS NULL=" + item.getWbs());
 					        	  	 bufferFallos.append("\n\r");
 					        	  }
+				        		  
+					        	 }
+					        	 
 					        	  if ((item.getCdrDate() != null) && (!item.getCdrDate().isEmpty())){
 					        		  System.out.println(" (88) :: date1 " + item.getCdrDate());  
 					        		  Date cdrDt1 = dateformat.parse(item.getCdrDate());
@@ -412,7 +429,7 @@ public class Batch {
 					        	  /* TODO: Include when we have Jira with person pickers fields---
 					        	    if ((item.getProjectMgrAccount() != null) && (!item.getProjectMgrAccount().isEmpty()))		        	   
 					        		  if (!(item.getProjectMgrAccount().equals(issue.getField(projmgracc)))){
-					        			  	Striissue.getKey() + " End Date Updated from " + issue.getField(projmgracc).toString() + " to: " + pjmg);
+					        			  	String issue.getKey() + " End Date Updated from " + issue.getField(projmgracc).toString() + " to: " + pjmg);
 								        	bufferExitos.append("\n\r");ng tmp1 = item.getProjectMgrAccount().substring(item.getProjectMgrAccount().indexOf("\\"));
 					        			  	String pjmg = new String("d" + tmp1);
 							  				System.out.println("[USER]-" + pjmg);
@@ -423,7 +440,38 @@ public class Batch {
 					        	  else{ 
 					        		  bufferFallos.append("[WARNING]-PROJECT END DATE IS NULL=" + item.getWbs());
 					        		  bufferFallos.append("\n\r");
-					        	  }*/					          }
+					        	  }*/
+					        	  //[buelga: 7/2/15]: added new fields in the csv to be treated as accoundIDs
+					        	  // TODO: Include when we have Jira with person pickers fields---
+					        	  /*TODO: Activate this part of code when Jira has person fields for Technical leads
+					        	   	String tlacc = item.getTechLeadAccount();
+					        	  	System.out.println("TL ACC = " + tlacc);
+					        	    if ((tlacc != null) && (!tlacc.isEmpty())){	
+				        			  if (tlacc.indexOf("\\")==-1){
+				        				  System.out.println("ERROR FORMATO en TECH LEAD ID");
+						        		  bufferFallos.append("[ERROR]-INCORRECT FORMAT FOR TECHLEAD ID=" + item.getWbs());
+						        		  bufferFallos.append("\n\r");
+				        			  }
+				        			  else{
+					        	    	tlacc = tlacc.substring(tlacc.indexOf("\\")+1);
+							        	tlacc = new String("d" + tlacc);
+				        			    String tlacc2 = issue.getField(techleadacc).toString();
+				        			  	System.out.println("TL ACC 1: " + tlacc);
+				        			  	System.out.println("TL ACC 2: " + tlacc2);
+					        		  if (!(tlacc.equals(tlacc2))){
+							  				System.out.println("[USER]-" + tlacc);
+											issue.update().field(techleadacc, tlacc).execute();
+								        	System.out.println(" (12) :: [UPDATED]-Project " + issue.getKey() + " End Date Updated from " + tlacc2 + " to: " + tlacc);
+					        			  	bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " End Date Updated from " + tlacc2 + " to: " + tlacc);
+								        	bufferExitos.append("\n\r");
+					        		  }
+				        			  }
+					        	   }
+					        	  else{ 
+					        		  bufferFallos.append("[WARNING]-TECHNICAL LEAD FIELD IS EMPTY FOR PROJECT=" + item.getWbs());
+					        		  bufferFallos.append("\n\r");
+					        	  }*/
+					          }
 					          else{
 					        	  bufferFallos.append("[ERROR]-PROJECT IS CLOSED=" + item.getWbs() + "-" + issue.getKey());
 					        	  bufferFallos.append("\n\r");

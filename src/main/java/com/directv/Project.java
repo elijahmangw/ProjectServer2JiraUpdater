@@ -23,6 +23,7 @@ public class Project {
 	private String keyRelease;
 	private String priority;
 	private String siteUrl;
+	private String techLeadAccount;
 	private String programMgrAccount;
 	private String projectMgrAccount;
 	private String prj;
@@ -32,14 +33,38 @@ public class Project {
     	
     }
 
-	public Project(String wbs, String summary, String description,
-			String technicalLead, String programManager, String projectManager,
-			String projectStartDate, String projectFinishDate, String pdrDate,
-			String cdrDate, String inServiceDate, String keyRelease, String siteUrl,
-			String priority) {
+	/**
+	 * @param wbs
+	 * @param summary
+	 * @param epmosummary
+	 * @param description
+	 * @param technicalLead
+	 * @param programManager
+	 * @param projectManager
+	 * @param projectStartDate
+	 * @param projectFinishDate
+	 * @param pdrDate
+	 * @param cdrDate
+	 * @param inServiceDate
+	 * @param keyRelease
+	 * @param priority
+	 * @param siteUrl
+	 * @param techLeadAccount
+	 * @param programMgrAccount
+	 * @param projectMgrAccount
+	 * @param prj
+	 */
+	public Project(String wbs, String summary, String epmosummary,
+			String description, String technicalLead, String programManager,
+			String projectManager, String projectStartDate,
+			String projectFinishDate, String pdrDate, String cdrDate,
+			String inServiceDate, String keyRelease, String priority,
+			String siteUrl, String techLeadAccount, String programMgrAccount,
+			String projectMgrAccount, String prj) {
 		super();
 		this.wbs = wbs;
 		this.summary = summary;
+		this.epmosummary = epmosummary;
 		this.description = description;
 		this.technicalLead = technicalLead;
 		this.programManager = programManager;
@@ -50,9 +75,14 @@ public class Project {
 		this.cdrDate = cdrDate;
 		this.inServiceDate = inServiceDate;
 		this.keyRelease = keyRelease;
-		this.siteUrl = siteUrl;
 		this.priority = priority;
+		this.siteUrl = siteUrl;
+		this.techLeadAccount = techLeadAccount;
+		this.programMgrAccount = programMgrAccount;
+		this.projectMgrAccount = projectMgrAccount;
+		this.prj = prj;
 	}
+
 
 	/**
 	 * @return the wbs
@@ -283,6 +313,20 @@ public class Project {
 	}
 
 	/**
+	 * @return the techLeadAccount
+	 */
+	public String getTechLeadAccount() {
+		return techLeadAccount;
+	}
+
+	/**
+	 * @param techLeadAccount the techLeadAccount to set
+	 */
+	public void setTechLeadAccount(String techLeadAccount) {
+		this.techLeadAccount = techLeadAccount;
+	}
+
+	/**
 	 * @return the programMgrAccount
 	 */
 	public String getProgramMgrAccount() {
@@ -337,9 +381,46 @@ public class Project {
 				+ ", projectFinishDate=" + projectFinishDate + ", pdrDate="
 				+ pdrDate + ", cdrDate=" + cdrDate + ", inServiceDate="
 				+ inServiceDate + ", keyRelease=" + keyRelease + ", priority="
-				+ priority + ", siteUrl=" + siteUrl + ", programMgrAccount="
-				+ programMgrAccount + ", projectMgrAccount="
-				+ projectMgrAccount + ", prj=" + prj + "]";
+				+ priority + ", siteUrl=" + siteUrl + ", techLeadAccount="
+				+ techLeadAccount + ", programMgrAccount=" + programMgrAccount
+				+ ", projectMgrAccount=" + projectMgrAccount + ", prj=" + prj
+				+ "]";
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#clone()
+	 */
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		return super.clone();
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#finalize()
+	 */
+	@Override
+	protected void finalize() throws Throwable {
+		// TODO Auto-generated method stub
+		super.finalize();
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
 	}
 
 
