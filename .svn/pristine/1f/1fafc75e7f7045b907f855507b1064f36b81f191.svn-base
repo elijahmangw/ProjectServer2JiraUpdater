@@ -27,7 +27,6 @@ public class Project {
 	private String programMgrAccount;
 	private String projectMgrAccount;
 	private String prj;
-	private String modifiedDate;
 	
 
     public Project() {
@@ -369,21 +368,7 @@ public class Project {
 		this.prj = prj;
 	}
  
-	  /**
-	 * @return the modifiedDate
-	 */
-	public String getModifiedDate() {
-		return modifiedDate;
-	}
-
-	/**
-	 * @param modifiedDate the modifiedDate to set
-	 */
-	public void setModifiedDate(String modifiedDate) {
-		this.modifiedDate = modifiedDate;
-	}
-
-	/* (non-Javadoc)
+	  /* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

@@ -94,6 +94,7 @@ public class Batch {
     StringBuffer bufferExitos = new StringBuffer();
     StringBuffer bufferFallos = new StringBuffer();
     StringBuffer wbsPrjMap = new StringBuffer();
+
 	
     @Bean
     public ItemReader<Project> reader() {
@@ -121,7 +122,7 @@ public class Batch {
             	setNames(new String[] {"wbs", "summary", "description",
             			"technicalLead", "programManager","projectManager",
             			"projectStartDate", "projectFinishDate","pdrDate","cdrDate", "inServiceDate", "keyRelease",
-            			"priority","siteUrl", "programMgrAccount", "projectMgrAccount", "prj", "techLeadAccount", "modifiedDate"
+            			"priority","siteUrl", "programMgrAccount", "projectMgrAccount", "prj", "techLeadAccount"
             			});
             }});
             setFieldSetMapper(new BeanWrapperFieldSetMapper<Project>() {{

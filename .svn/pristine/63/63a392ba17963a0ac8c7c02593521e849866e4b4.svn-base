@@ -94,6 +94,7 @@ public class Batch {
     StringBuffer bufferExitos = new StringBuffer();
     StringBuffer bufferFallos = new StringBuffer();
     StringBuffer wbsPrjMap = new StringBuffer();
+
 	
     @Bean
     public ItemReader<Project> reader() {
@@ -121,7 +122,7 @@ public class Batch {
             	setNames(new String[] {"wbs", "summary", "description",
             			"technicalLead", "programManager","projectManager",
             			"projectStartDate", "projectFinishDate","pdrDate","cdrDate", "inServiceDate", "keyRelease",
-            			"priority","siteUrl", "programMgrAccount", "projectMgrAccount", "prj", "techLeadAccount", "modifiedDate"
+            			"priority","siteUrl", "programMgrAccount", "projectMgrAccount", "prj", "techLeadAccount"
             			});
             }});
             setFieldSetMapper(new BeanWrapperFieldSetMapper<Project>() {{
@@ -196,13 +197,6 @@ public class Batch {
 	                .execute();
 	            System.out.println(newIssue);
 	            */
-			    
-			    /*
-			     * Esta porcion de codigo es para encontrar todos los features incluidos en una iteration,
-			     * y las releases asociadas a estos
-			     * 
-			     * TODO: hacer codigo aqui y exportar a fichero csv
-			     * */
 
 			    for(Project item : items){
 					String wbss = item.getWbs();
@@ -220,7 +214,7 @@ public class Batch {
 	        					wbss = wbss.substring(0, wbss.indexOf(",")).trim();
 					    else wbss.trim();
 	        			System.out.println(" (-1) :: " + wbss);
-						Issue.SearchResult sr = jira.searchIssues("status!=Closed and wbs~" + wbss);
+						Issue.SearchResult sr = jira.searchIssues("wbs ~ " + wbss);
 						//--Issue.SearchResult sr = jira.searchIssues("id = " + prjj);
 						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + wbss);
 						  if (sr.issues.size() > 1){ 
@@ -326,7 +320,7 @@ public class Batch {
 					        	  if ((inserdt != null) && (!inserdt.isEmpty())){
 					        		  System.out.println(" (88) :: date1 " + inserdt);  
 					        		  inServiceDated1 = dateformat.parse(inserdt);
-					        		  System.out.println(" (88) :: date1 inserv " + inServiceDated1);
+					        		  System.out.println(" (88) :: date1 inser" + inServiceDated1);
 					        	  }
 					        	  else{
 					        		  finalInService = dateformat.parse(keyreldt);
@@ -356,20 +350,14 @@ public class Batch {
 					        	  }
 				        		  
 					        	 }
+					        	 
 					        	  if ((item.getCdrDate() != null) && (!item.getCdrDate().isEmpty())){
 					        		  System.out.println(" (88) :: date1 " + item.getCdrDate());  
 					        		  Date cdrDt1 = dateformat.parse(item.getCdrDate());
 					        		  System.out.println(" (88) :: date1 " + cdrDt1);  
-					        		  System.out.println(" (188) :: date2 " + issue.getField(cdrdate));  
-					        	  	  String cdrDtt2 = issue.getField(cdrdate).toString();
-					        	  	  System.out.println(" (888) :: date2 " + cdrDtt2);
-					        	  	  Date cdrDt2;
-					        	  	if (!(cdrDtt2.equals("null")) && !(cdrDtt2.isEmpty()) && (cdrDtt2 != null)){
-					        		  cdrDt2 = dtformatter.parse(cdrDtt2);
-					        	  	}
-					        	  	else{ cdrDt2 = dtformatter.parse("1960-01-01");	
-					        	  	}
-					        	  	  System.out.println(" (88) ::: date2 cdr" + cdrDt2);
+					        		  System.out.println(" (88) :: date2 " + issue.getField(cdrdate).toString());  
+					        	  	  Date cdrDt2 = dtformatter.parse(issue.getField(cdrdate).toString());
+					        	  	  System.out.println(" (88) ::: date2 " + cdrDt2);
 					        		  if (!(cdrDt1.equals(cdrDt2))){
 					        			  issue.update().field(cdrdate, cdrDt1).execute();
 							        	  System.out.println(" (9) :: Project " + issue.getKey() + " CDR Date Updated from " + cdrDt2 + " to: " + cdrDt1);
@@ -387,12 +375,8 @@ public class Batch {
 					        		  Date pdrDt1 = dateformat.parse(item.getPdrDate());
 					        		  System.out.println(" (88) :: date1 " + pdrDt1);  
 					        		  System.out.println(" (88) :: date2 " + issue.getField(pdrdate).toString());  
-					        	  	  String pdrDtt2 = issue.getField(pdrdate).toString();
-					        	  	  Date pdrDt2;
-					        	  	  if (!(pdrDtt2.equals("null")) && !(pdrDtt2.isEmpty()) && (pdrDtt2 != null)){
-					        			  pdrDt2 = dtformatter.parse(issue.getField(pdrdate).toString());
-					        		  }else {pdrDt2 = dtformatter.parse("1960-01-01");}
-					        	  	  System.out.println(" (88) ::: date2 pdr" + pdrDt2);
+					        	  	  Date pdrDt2 = dtformatter.parse(issue.getField(pdrdate).toString());
+					        	  	  System.out.println(" (88) ::: date2 " + pdrDt2);
 					        		  if (!(pdrDt1.equals(pdrDt2))){
 					        			  issue.update().field(pdrdate, pdrDt1).execute();
 							        	  System.out.println(" (10) :: Project " + issue.getKey() + " PDR Date Updated from " + pdrDt2 + " to: " + pdrDt1);
@@ -459,7 +443,7 @@ public class Batch {
 					        	  }*/
 					        	  //[buelga: 7/2/15]: added new fields in the csv to be treated as accoundIDs
 					        	  // TODO: Include when we have Jira with person pickers fields---
-					        	  /* TODO: Activate this part of code when Jira has person fields for Technical leads
+					        	  /*TODO: Activate this part of code when Jira has person fields for Technical leads
 					        	   	String tlacc = item.getTechLeadAccount();
 					        	  	System.out.println("TL ACC = " + tlacc);
 					        	    if ((tlacc != null) && (!tlacc.isEmpty())){	
