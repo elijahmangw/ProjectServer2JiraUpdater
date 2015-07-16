@@ -17,6 +17,7 @@ import net.rcarz.jiraclient.Issue;
 import net.rcarz.jiraclient.JiraClient;
 import net.rcarz.jiraclient.Priority;
 import net.rcarz.jiraclient.Status;
+import net.sf.json.JSONNull;
 import net.sf.json.JSONObject;
 
 import org.apache.commons.httpclient.util.URIUtil;
@@ -200,8 +201,9 @@ public class Batch {
 			    /*
 			     * Esta porcion de codigo es para encontrar todos los features incluidos en una iteration,
 			     * y las releases asociadas a estos
-			     * 
 			     * TODO: hacer codigo aqui y exportar a fichero csv
+			     * 
+			     * 
 			     * */
 
 			    for(Project item : items){
@@ -210,10 +212,10 @@ public class Batch {
 			    	System.out.println("WBS=" + wbss);
 					System.out.println("PRJ=" + prjj);
 					//--[bbuelga:6/29/15: adding PRJ authentication --
-					/*if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
+					if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
 						Issue.SearchResult sr = jira.searchIssues("id= " + prjj);
-						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getPrj() + item.getWbs());
-					}*/
+						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getPrj() +" " + item.getWbs());
+					}
 					if ((wbss != null) && !(wbss.isEmpty())){
 						//--if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
 	        			if ((wbss.indexOf(",")!=-1)) 
@@ -243,17 +245,38 @@ public class Batch {
 							    wbsPrjMap.append("\n\r");
 							  System.out.println("[STATUS]-" + issue.getStatus());
 							  
-					          if (!issue.getStatus().toString().toUpperCase().equals("CLOSED"))
-					          {
-					        	  //Getting current issue priority, to compare and don't change in case equals
-					        	  String prevprior = ((JSONObject)(issue.getField(priorityfield))).get("value").toString();
+					          // Not needed since closed projects are filtered out in the main query
+							  //if (!issue.getStatus().toString().toUpperCase().equals("CLOSED"))
+					          //{
+					        	//Getting current issue priority, to compare and don't change in case equals
+							  	//JSONObject job1 = (JSONObject)issue.getField(priorityfield);
+							  	/*if ((issue.getField(priorityfield) instanceof JSONNull) || (issue.getField(priorityfield).toString().equals("null")))
+							  	  {	
+							  		ValueTuple valorP;
+							  		valorP = new ValueTuple(ValueType.VALUE, "P4");
+							  		//issue.transition().field(priorityfield, valorP).execute("Open");
+							  		//issue.update().field(priorityfield, Field.valueById("11661")).execute();
+							  		issue.update().field(priorityfield, valorP).execute();
+							  		//Thread.sleep(4000);
+							  		System.out.println("Current Priority: X " + issue.getField(priorityfield).toString());
+							  		//job1 = issue.getField(priorityfield);
+							  	  }*/
+							  	String prevprior = "";
+							  	if ((issue.getField(priorityfield) instanceof JSONNull) || (issue.getField(priorityfield).toString().equals("null"))) {
+							  		prevprior = "null";
+							  	} else {
+							  		prevprior = ((JSONObject)(issue.getField(priorityfield))).get("value").toString();
+							  	}
+
+						  		  //String prevprior = ((JSONObject)(job1)).get("value").toString();
 					        	  System.out.println("Previous Priority: " + prevprior);
 					        	  ValueTuple valorP;
 					        	  if ((item.getPriority() != null) && (!item.getPriority().isEmpty()))
 					        		  valorP = new ValueTuple(ValueType.VALUE, item.getPriority());
 					              else
 					        		  valorP = new ValueTuple(ValueType.VALUE, "P4");
-					        	  
+							  	  
+					        	  System.out.println("Changed to: " + valorP.value.toString());
 					        	  System.out.println(item.getSiteUrl());
 					        	  String urlsite = URIUtil.encodeQuery(item.getSiteUrl());
 					        	  if (urlsite.isEmpty()) urlsite = new String("http://blank");
@@ -265,7 +288,7 @@ public class Batch {
 					        	  					        	  
 					        	  if (!(valorP.value.toString().trim().equals(prevprior.trim()))){
 					        		  issue.update().field(priorityfield, valorP).execute();   		//priority update
-						        	  System.out.println(" (3) :: Project " + issue.getKey() + " Priority Updated " + prevprior + " to: " + item.getPriority());
+						        	  System.out.println(" (3) :: Project " + issue.getKey() + " Priority Updated " + prevprior + " to: " +  item.getPriority());
 						        	  bufferExitos.append("[UPDATED]-Project " + issue.getKey() + " Priority Updated from " + prevprior + " to: " + item.getPriority());
 						        	  bufferExitos.append("\n\r");
 					        	  }
@@ -409,7 +432,11 @@ public class Batch {
 					        		  Date pjstart1 = dateformat.parse(item.getProjectStartDate());
 					        		  System.out.println(" (88) :: date1 " + pjstart1);  
 					        		  System.out.println(" (88) :: date2 " + issue.getField(startdate).toString());  
-					        	  	  Date pjstart2 = dtformatter.parse(issue.getField(startdate).toString());
+					        	  	  String startDtt2 = issue.getField(startdate).toString();
+					        	  	  Date pjstart2; 
+					        	  	  if (!(startDtt2.equals("null")) && !(startDtt2.isEmpty()) && (startDtt2 != null)){
+					        	  		pjstart2 = dtformatter.parse(issue.getField(startdate).toString());
+					        		  }else {pjstart2 = dtformatter.parse("1960-01-01");}
 					        	  	  System.out.println(" (88) ::: date2 " + pjstart2);
 					        		  if (!(pjstart1.equals(pjstart2))){
 					        			  issue.update().field(startdate, pjstart1).execute();
@@ -427,7 +454,11 @@ public class Batch {
 					        		  Date pjend1 = dateformat.parse(item.getProjectFinishDate());
 					        		  System.out.println(" (88) :: date1 " + pjend1);  
 					        		  System.out.println(" (88) :: date2 " + issue.getField(enddate).toString());  
-					        	  	  Date pjend2 = dtformatter.parse(issue.getField(enddate).toString());
+					        		  String endDtt2 = issue.getField(enddate).toString();
+					        	  	  Date pjend2; 
+					        	  	  if (!(endDtt2.equals("null")) && !(endDtt2.isEmpty()) && (endDtt2 != null)){
+					        	  		pjend2 = dtformatter.parse(issue.getField(enddate).toString());
+					        		  }else {pjend2 = dtformatter.parse("1960-01-01");}
 					        	  	  System.out.println(" (88) ::: date2 " + pjend2);
 					        		  if (!(pjend1.equals(pjend2))){
 					        			  	issue.update().field(enddate, pjend1).execute();
@@ -487,11 +518,11 @@ public class Batch {
 					        		  bufferFallos.append("[WARNING]-TECHNICAL LEAD FIELD IS EMPTY FOR PROJECT=" + item.getWbs());
 					        		  bufferFallos.append("\n\r");
 					        	  }*/
-					          }
-					          else{
-					        	  bufferFallos.append("[ERROR]-PROJECT IS CLOSED=" + item.getWbs() + "-" + issue.getKey());
-					        	  bufferFallos.append("\n\r");
-					          }
+					          //}
+					          //else{
+					        //	  bufferFallos.append("[ERROR]-PROJECT IS CLOSED=" + item.getWbs() + "-" + issue.getKey());
+					        //	  bufferFallos.append("\n\r");
+					         // 147.22.106.15 }
 						  }
 					}
 					else{
@@ -507,12 +538,16 @@ public class Batch {
 			    bufferFallos.append("\n\r");
 			    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss") ;
 			    Date dt = new Date();
+			    //File file = new File("\\\\common1\\common\\JiraScriptLogs\\success_" + dateFormat.format(dt) + ".log") ;
 			    File file = new File("\\\\common1\\common\\TEMPLATE\\Temp\\success_" + dateFormat.format(dt) + ".log") ;
 			    //BufferedWriter writerlogros = new BufferedWriter( new FileWriter("logros.log"));
 			    BufferedWriter writerlogros = new BufferedWriter(new FileWriter( file));
+			    //File file2 = new File("\\\\common1\\common\\JiraScriptLogs\\failures_" + dateFormat.format(dt) + ".log") ;
 			    File file2 = new File("\\\\common1\\common\\TEMPLATE\\Temp\\failures_" + dateFormat.format(dt) + ".log") ;
 			    BufferedWriter writerfallos = new BufferedWriter( new FileWriter(file2));
-				BufferedWriter writermapping = new BufferedWriter( new FileWriter("wbs_prj_map.log"));
+			    //File file3 = new File("\\\\common1\\common\\JiraScriptLogs\\wbsprjmap_" + dateFormat.format(dt) + ".log") ;
+			    File file3 = new File("\\\\common1\\common\\TEMPLATE\\Temp\\wbsprjmap_" + dateFormat.format(dt) + ".log") ;
+			    BufferedWriter writermapping = new BufferedWriter( new FileWriter(file3));
 				writerlogros.write(bufferExitos.toString());
 				writerlogros.newLine();
 				writerfallos.write(bufferFallos.toString());
