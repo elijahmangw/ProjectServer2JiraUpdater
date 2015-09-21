@@ -105,16 +105,20 @@ public class Batch {
        //**PROD**
         //reader.setResource(new ClassPathResource("ExecProj.csv"));
         //**DEV ENV**
-        //String pathrsc = new String("\\\\common1\\common\\temp\\ExecutionReport\\ExecutionProjectDetails.csv");
+        //String pathrsc = new String("\\\\common1\\common\\TEMPLATE\\ExecProj_150520.csv");
         //﻿Finance_Charge_Code,ProjectName,Project_Status_Summary,Project_Description,
         //Technical_Lead,Program_Manager,ProjectOwnerName,ProjectStartDate,ProjectFinishDate,PDR_Finish,CDR_Finish,
         //Client_HE_Release,Key_Release,Project_Priority,ProjectWorkspaceInternalHRef
-        
-        String pathrsc = new String("c:\\T\\ExecutionProjectDetails.csv");
-        //String pathrsc = new String("ExecutionProjectDetails.csv");
+
+        String pathrsc = new String("ExecutionProjectDetails.csv");
+        //String pathrsc = new String("Exdet.csv");
         reader.setResource(new ClassPathResource(pathrsc));
         reader.setLineMapper(new DefaultLineMapper<Project>() {{
             setLineTokenizer(new DelimitedLineTokenizer() {{
+                /*setNames(new String[] {"wbs", "summary", "epmosummary", "description",
+            			"technicalLead", "programManager","projectManager",
+            			"projectStartDate", "projectFinishDate","pdrDate","cdrDate", "inServiceDate", "keyRelease",
+            			"priority","siteUrl"});*/
             	setNames(new String[] {"wbs", "summary", "description",
             			"technicalLead", "programManager","projectManager",
             			"projectStartDate", "projectFinishDate","pdrDate","cdrDate", "inServiceDate", "keyRelease",
@@ -134,7 +138,10 @@ public class Batch {
     	return new ItemProcessor<Project,Project>(){
     	    @Override
     	    public Project process(final Project project) throws Exception {
+    	    	//Project otroproj = new Project();
+    	    	//project.setPriority(project.getPriority());
     	    	project.setSummary(project.getSummary().trim());
+    	    	//--project.setEpmosummary(project.getEpmosummary().trim());
     	    	project.setDescription(project.getDescription().trim());
     	    	
     	    	if (project.getSiteUrl().isEmpty())
@@ -206,14 +213,8 @@ public class Batch {
 					System.out.println("PRJ=" + prjj);
 					//--[bbuelga:6/29/15: adding PRJ authentication --
 					if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
-						try{
-							Issue.SearchResult sr = jira.searchIssues("id= " + prjj);
-							System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getPrj() +" " + item.getWbs());
-						   }
-						catch (Exception e){
-							System.out.println(" (ERROR!) :: Projects with PRJ= " + item.getPrj() +" DOES NOT EXISTS IN JIRA -- " + item.getWbs());
-						}
-						
+						Issue.SearchResult sr = jira.searchIssues("id= " + prjj);
+						System.out.println(" (0) :: " + sr.total + " Projects with WBS= " + item.getPrj() +" " + item.getWbs());
 					}
 					if ((wbss != null) && !(wbss.isEmpty())){
 						//--if ((item.getPrj() != null) && !(item.getPrj().isEmpty())){
